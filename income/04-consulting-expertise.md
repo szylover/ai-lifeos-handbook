@@ -552,7 +552,7 @@ $$
 计算月度净节省：
 
 $$
-\text{Monthly Gross Saving} = 50{,}000 \times 20\% \times 4 = 40{,}000
+\text{Monthly Gross Saving} = 50{,}000 \times 0.20 \times 4 = 40{,}000
 $$
 
 $$

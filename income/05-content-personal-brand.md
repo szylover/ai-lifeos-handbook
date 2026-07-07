@@ -603,19 +603,19 @@ Platform impressions → Profile visits → Followers → Email subscribers → 
 公式：
 
 $$
-EmailSubs = Followers \times 8\% = 1200 \times 0.08 = 96
+EmailSubs = Followers \times 0.08 = 1200 \times 0.08 = 96
 $$
 
 $$
-Leads = EmailSubs \times 20\% = 96 \times 0.20 = 19.2 \approx 19
+Leads = EmailSubs \times 0.20 = 96 \times 0.20 = 19.2 \approx 19
 $$
 
 $$
-Calls = Leads \times 25\% = 19 \times 0.25 = 4.75 \approx 5
+Calls = Leads \times 0.25 = 19 \times 0.25 = 4.75 \approx 5
 $$
 
 $$
-Customers = Calls \times 40\% = 5 \times 0.40 = 2
+Customers = Calls \times 0.40 = 5 \times 0.40 = 2
 $$
 
 $$

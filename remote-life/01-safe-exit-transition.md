@@ -226,7 +226,7 @@ $$
 保守可动用流动资产：
 
 $$
-80,000+120,000+100,000+180,000\times 50\%=390,000
+\text{可动用流动资产} = 80{,}000 + 120{,}000 + 100{,}000 + 180{,}000 \times 0.5 = 390{,}000
 $$
 
 ### 3.2 当前月支出
@@ -396,13 +396,13 @@ $$
 推荐资深工程师采用平衡型起步：
 
 $$
-\text{Quit Trigger}=\left(\text{Side Income}_{6m}\ge70\%\times\text{Living Cost}\right)\land\left(\text{Runway}\ge18\right)
+\text{Quit Trigger} = (\text{Side Income}_{6m} \ge 0.7 \times \text{Living Cost}) \ \land\ (\text{Runway} \ge 18)
 $$
 
 如果你有家庭责任或签证约束，把阈值提高：
 
 $$
-\text{Quit Trigger}=\left(\text{Side Income}_{6m}\ge100\%\times\text{Living Cost}\right)\land\left(\text{Runway}\ge24\right)
+\text{Quit Trigger} = (\text{Side Income}_{6m} \ge 1.0 \times \text{Living Cost}) \ \land\ (\text{Runway} \ge 24)
 $$
 
 ### 5.3 收入连续性的定义
