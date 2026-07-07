@@ -447,7 +447,7 @@ I’m in UTC+8. I can consistently overlap [2–4] hours with [team timezone], f
 
 ### 4.3 技术编码：海外面试更重视沟通
 
-准备路线见 [编码面试模式](05-coding-interview-patterns.md)。你的现场表现要做到：
+编码环节，海外面试更看重沟通与推理过程而非题量。你的现场表现要做到：
 
 - 开始前复述题意和约束：输入范围、重复元素、排序、空值、复杂度目标。
 - 先给 brute force，再优化，不要沉默 10 分钟。
@@ -767,7 +767,7 @@ Senior platform engineer specializing in Kubernetes reliability and cloud cost o
 
 ### 第 3 周：面试准备与复盘
 
-1. 每天 1 道 coding，按 [编码面试模式](05-coding-interview-patterns.md) 练口述。
+1. 每天 1 道 coding，重点练边写边口述（先复述题意与约束，再讲思路，最后写）。
 2. 每两天 1 道 system design，按 [系统设计面试](03-system-design-interview.md) 时间盒。
 3. 写 8 个 STAR 故事，按 [STAR 行为面试](04-behavioral-interview-star.md) 录音。
 4. 每次 recruiter screen 后写复盘：

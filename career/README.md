@@ -1,46 +1,43 @@
-# WP-02 · 职业发展白皮书
+# WP-02 · 职业跃迁白皮书（市场杠杆）
 
-> 资深工程师转型 AI、走向 Remote 与海外的定位、作品集与面试体系
+> 把"资深工程 × AI 应用"的稀缺定位，兑换成远程/出海的高价市场入场券
 
-**版本** v1.0 · **更新** 2026-07-06
+**版本** v2.0 · **更新** 2026-07-07
 
 ## 摘要
 
-以『资深工程 × AI 应用』的稀缺交集为定位，系统给出作品集策略、算法与系统设计面试框架、行为面试方法论与 Remote/海外求职谈薪路径，并附技术面试所需的算法专题，构成一条可执行的职业跃迁路线。
+在《逃离坐班白皮书》里，这一册负责**市场杠杆**：不是教你如何"考进另一个格子间"，而是把你已有的工程能力重新定位、打包成作品集，并接入全球远程与海外市场——这既是更高的收入天花板，也是通往地点自由与后续独立变现的跳板。
 
 ## 执行摘要
 
-职业跃迁的胜负，很大程度上在投递之前就由**定位**与**作品集**决定。本白皮书主张：泛泛的"会 AI"不值钱，"能把 AI 可靠地做进产品的资深工程师"才稀缺——用目标岗位 JD 逆向对齐能力缺口，把既有系统工程能力作为相对新人的护城河。
+职业跃迁的胜负，很大程度上在投递之前就由**定位**与**作品集**决定。泛泛的"会 AI"不值钱，"能把 AI 可靠地做进产品的资深工程师"才稀缺——用目标岗位 JD 逆向对齐能力缺口，把既有系统工程能力作为护城河。
 
-面试层面，我们提供四套可复用框架：算法面试**按模式而非题号**组织（~15 个套路）、系统设计走**固定 45 分钟时间盒**、行为面试用 **STAR 故事库**、并以英语 think-aloud 贯穿始终。求职层面，Remote → 海外 → 独立逐级打开选项，英语、作品集、公开影响力是三大杠杆；谈薪则以数据锚定、并行多 offer、永不先报数。
+本册聚焦**能力建设**而非应试技巧：以真实作品证明交付力，用系统设计能力展示架构判断，用职业叙事传递影响力，并以 Remote → 海外 → 独立逐级打开选项。英语、作品集、公开影响力是三大杠杆；谈薪则以数据锚定、并行多 offer、永不先报数。
+
+> 关于纯算法刷题（LeetCode/DP 等）本册不再收录——它服务的是"进厂"而非"逃离"。若求职流程确需，另行专项准备即可。
 
 ## 关键要点
 
 - 定位公式：资深工程能力 × AI 应用交付 = 市场稀缺性；用 JD 逆向对齐缺口。
 - 一个有真实用户、有度量、有复盘的作品，胜过十个教程 demo。
-- 算法面试按模式刷题（~15 套路），练『识别模式→报复杂度→边说边写』。
-- 系统设计固定时间盒：澄清→估算→接口/模型→高层→深挖→权衡。
-- 行为面试用 STAR 故事库，Action 突出个人、Result 带数字。
+- 系统设计的价值是**架构判断力**，不是背题：澄清→估算→接口/模型→高层→深挖→权衡。
+- 职业叙事用 STAR 作骨架，Action 突出个人贡献、Result 带数字与影响。
+- Remote → 海外 → 独立，是把市场杠杆逐级放大的路径。
 
 ## 章节
 
 1. [资深工程师转型 AI：12 个月行动计划](01-career-pivot-to-ai.md)
 2. [海外与 Remote 求职策略](02-remote-overseas-job-strategy.md)
-3. [系统设计面试框架（面向资深工程师）](03-system-design-interview.md)
-4. [行为面试与 STAR 方法（讲好你的故事）](04-behavioral-interview-star.md)
-5. [编程面试的核心套路（模式化刷题）](05-coding-interview-patterns.md)
-6. [动态规划专题：从状态定义到优化](06-dynamic-programming-guide.md)
-7. [最长递增子序列：O(n log n) 解法](07-longest-increasing-subsequence.md)
+3. [系统设计能力：像架构师一样思考](03-system-design-interview.md)
+4. [讲好你的职业故事：影响力与叙事](04-behavioral-interview-star.md)
 
 ## 参考文献
 
 1. [levels.fyi（薪酬与职级数据）](https://www.levels.fyi)
-2. [LeetCode](https://leetcode.com)
-3. [NeetCode 150（按模式分类）](https://neetcode.io)
-4. [System Design Primer](https://github.com/donnemartin/system-design-primer)
-5. [ByteByteGo（系统设计图解）](https://bytebytego.com)
-6. [We Work Remotely](https://weworkremotely.com)
-7. [Amazon Leadership Principles](https://www.amazon.jobs/content/en/our-workplace/leadership-principles)
+2. [System Design Primer](https://github.com/donnemartin/system-design-primer)
+3. [ByteByteGo（系统设计图解）](https://bytebytego.com)
+4. [We Work Remotely](https://weworkremotely.com)
+5. [Amazon Leadership Principles](https://www.amazon.jobs/content/en/our-workplace/leadership-principles)
 
 ---
 
