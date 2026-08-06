@@ -1,0 +1,25 @@
+[
+  {
+    "date": "2026-08-06",
+    "file": "daily/2026-08-06.html",
+    "articles": 5,
+    "words": 1761,
+    "vocabulary": 30,
+    "questions": 15,
+    "topics": [
+      "earth-science",
+      "astronomy",
+      "public-health",
+      "technology",
+      "biology"
+    ],
+    "sources": [
+      "NASA",
+      "ESA",
+      "UC Berkeley News",
+      "MIT News",
+      "University of Cambridge"
+    ],
+    "intro_zh": "今天这一版全部取自公有领域与开放授权来源：NASA 讲巴西那片「看着像沙漠、其实年年积水成湖」的沙丘；ESA 用韦布望远镜打开船底座星云里的「宝箱」；伯克利谈西尼罗病毒为何随气温骤增；MIT 发现同一段 AI 解释对专家和外行的作用截然相反；剑桥拿到 5000 万英镑研究线粒体 DNA 疾病。题材覆盖地球科学、天文、公共卫生、科技与生命科学，正是托福阅读的主战场。"
+  }
+]

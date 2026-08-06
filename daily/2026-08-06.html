@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>今日要闻 · 托福精读 2026-08-06</title>
+<style>
+  :root {
+    --bg: #f6f5f2;
+    --surface: #ffffff;
+    --surface-alt: #faf9f6;
+    --text: #1b1b1b;
+    --text-soft: #5c5c5c;
+    --text-faint: #8a8a8a;
+    --line: #e2e0da;
+    --accent: #9a3412;
+    --accent-soft: #fef3c7;
+    --zh: #2b3a55;
+    --shadow: 0 1px 2px rgba(0,0,0,.05), 0 8px 24px rgba(0,0,0,.05);
+    --radius: 12px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16161a;
+      --surface: #1e1e23;
+      --surface-alt: #24242a;
+      --text: #e8e6e3;
+      --text-soft: #a8a6a2;
+      --text-faint: #78766f;
+      --line: #33333a;
+      --accent: #f0a875;
+      --accent-soft: #3d2f1a;
+      --zh: #a8bcd8;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Iowan Old Style", "Source Serif Pro", Georgia, "Songti SC", "Noto Serif CJK SC", serif;
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px 96px; }
+
+  /* ---------- toolbar ---------- */
+  .toolbar {
+    position: sticky; top: 0; z-index: 50;
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    padding: 10px 20px;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line);
+    font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 13px;
+  }
+  .toolbar .date { font-weight: 600; letter-spacing: .02em; }
+  .toolbar .spacer { flex: 1; }
+  .btn {
+    border: 1px solid var(--line); background: var(--surface); color: var(--text-soft);
+    padding: 5px 12px; border-radius: 999px; cursor: pointer; font: inherit;
+    transition: all .15s ease;
+  }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+  .btn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+
+  /* ---------- header ---------- */
+  header.page { padding: 56px 0 32px; border-bottom: 1px solid var(--line); }
+  header.page h1 { margin: 0 0 6px; font-size: 40px; letter-spacing: -.01em; }
+  header.page .sub {
+    font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 13px; color: var(--text-faint); letter-spacing: .08em; text-transform: uppercase;
+  }
+  header.page .intro { margin-top: 20px; color: var(--text-soft); font-size: 16.5px; max-width: 70ch; }
+
+  /* ---------- table of contents ---------- */
+  nav.toc { margin: 28px 0 8px; font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; font-size: 14px; }
+  nav.toc ol { margin: 0; padding-left: 1.4em; color: var(--text-faint); }
+  nav.toc li { margin: 5px 0; }
+  nav.toc a { color: var(--text-soft); text-decoration: none; }
+  nav.toc a:hover { color: var(--accent); text-decoration: underline; }
+
+  /* ---------- article card ---------- */
+  article.card {
+    margin: 44px 0; padding: 32px 34px;
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: var(--radius); box-shadow: var(--shadow);
+  }
+  .meta {
+    display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+    font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 12px; color: var(--text-faint); margin-bottom: 14px;
+  }
+  .tag {
+    padding: 2px 9px; border-radius: 999px; border: 1px solid var(--line);
+    letter-spacing: .04em; text-transform: uppercase;
+  }
+  .tag.difficulty-easy   { color: #2f7d4f; border-color: #2f7d4f66; }
+  .tag.difficulty-medium { color: #b06d16; border-color: #b06d1666; }
+  .tag.difficulty-hard   { color: #a33a2a; border-color: #a33a2a66; }
+
+  .card h2 { margin: 0 0 4px; font-size: 26px; line-height: 1.35; letter-spacing: -.01em; }
+  .card h2 a { color: inherit; text-decoration: none; }
+  .card h2 a:hover { color: var(--accent); }
+  .title-zh { margin: 0 0 6px; font-size: 18px; color: var(--zh); font-weight: 600; }
+  .summary-zh {
+    margin: 12px 0 0; padding-left: 14px; border-left: 3px solid var(--accent);
+    color: var(--text-soft); font-size: 15.5px;
+  }
+
+  /* ---------- bilingual body ---------- */
+  .passage { margin-top: 26px; }
+  .para {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px;
+    padding: 14px 0; border-top: 1px dashed var(--line);
+  }
+  .para:first-child { border-top: none; }
+  .para .en { margin: 0; }
+  .para .zh { margin: 0; color: var(--zh); font-size: 16px; }
+  @media (max-width: 900px) {
+    .para { grid-template-columns: 1fr; gap: 8px; }
+    .para .zh { padding-left: 12px; border-left: 2px solid var(--line); }
+  }
+  body.hide-zh .para { grid-template-columns: 1fr; }
+  body.hide-zh .zh, body.hide-zh .title-zh, body.hide-zh .summary-zh { display: none; }
+
+  /* ---------- vocabulary highlight ---------- */
+  mark.vocab {
+    background: var(--accent-soft); color: inherit; padding: 0 2px; border-radius: 3px;
+    border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+    cursor: help; position: relative;
+  }
+  body.no-highlight mark.vocab { background: none; border-bottom: none; cursor: inherit; }
+  mark.vocab::after {
+    content: attr(data-tip);
+    position: absolute; left: 50%; bottom: 100%; transform: translate(-50%, -6px);
+    background: var(--text); color: var(--bg); padding: 6px 10px; border-radius: 6px;
+    font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 13px; line-height: 1.5; white-space: pre; text-align: left;
+    opacity: 0; pointer-events: none; transition: opacity .12s ease; z-index: 20;
+    box-shadow: 0 4px 14px rgba(0,0,0,.2);
+  }
+  mark.vocab:hover::after { opacity: 1; }
+  body.no-highlight mark.vocab::after { content: none; }
+
+  /* ---------- study blocks ---------- */
+  .study { margin-top: 26px; border-top: 1px solid var(--line); padding-top: 22px; }
+  .study h3 {
+    margin: 0 0 14px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--text-faint);
+    font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  }
+  .study + .study { margin-top: 24px; }
+
+  table.vocab-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  table.vocab-table td { padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.vocab-table tr:last-child td { border-bottom: none; }
+  .v-word { font-weight: 700; white-space: nowrap; }
+  .v-phon { color: var(--text-faint); font-size: 13.5px; white-space: nowrap; }
+  .v-pos  { color: var(--text-faint); font-style: italic; white-space: nowrap; font-size: 13.5px; }
+  .v-zh   { color: var(--zh); }
+  .v-en   { color: var(--text-soft); font-size: 14px; }
+  .v-ctx  { color: var(--text-faint); font-size: 13.5px; font-style: italic; }
+  body.hide-zh .v-zh { display: none; }
+
+  .sentence { margin-bottom: 22px; padding: 18px 20px; background: var(--surface-alt); border-radius: 10px; }
+  .sentence:last-child { margin-bottom: 0; }
+  .s-orig { margin: 0 0 14px; font-size: 16.5px; }
+  .s-backbone {
+    margin: 0 0 14px; padding: 9px 12px; background: var(--accent-soft); border-radius: 7px;
+    font-size: 15.5px;
+  }
+  .s-backbone .label {
+    font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--accent); display: block; margin-bottom: 3px;
+  }
+  .s-backbone .bb-zh { color: var(--zh); font-size: 14.5px; }
+  body.hide-zh .s-backbone .bb-zh { display: none; }
+  ol.breakdown { margin: 0 0 14px; padding-left: 1.3em; font-size: 15px; }
+  ol.breakdown li { margin: 7px 0; }
+  ol.breakdown .part { font-weight: 600; }
+  ol.breakdown .role {
+    display: inline-block; margin-left: 7px; padding: 1px 8px; border-radius: 999px;
+    background: var(--line); color: var(--text-soft);
+    font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; font-size: 12px;
+  }
+  ol.breakdown .note { display: block; color: var(--text-faint); font-size: 14px; margin-top: 2px; }
+  .s-trans { margin: 0; color: var(--zh); font-size: 15.5px; }
+  body.hide-zh .s-trans { display: none; }
+
+  footer.page {
+    margin-top: 60px; padding-top: 22px; border-top: 1px solid var(--line);
+    color: var(--text-faint); font-size: 13px;
+    font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+  }
+  footer.page a { color: var(--text-soft); }
+
+  @media print {
+    .toolbar, nav.toc { display: none; }
+    body { background: #fff; font-size: 12pt; }
+    article.card { break-inside: avoid; box-shadow: none; border-color: #ccc; margin: 20px 0; }
+    mark.vocab::after { content: none; }
+  }
+/* ---- added: stats, licence, quiz, glossary ---- */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:60;transition:width .12s linear}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0 6px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;text-align:center}
+.stat b{display:block;font-size:22px;line-height:1.2;color:var(--accent)}
+.stat span{font-size:12px;color:var(--text-faint)}
+.lic{font-size:11px;padding:1px 7px;border-radius:999px;border:1px solid var(--line);color:var(--text-faint);white-space:nowrap}
+.lic-public-domain,.lic-cc-by,.lic-cc-by-sa{border-color:#3f9c5a;color:#3f9c5a}
+.attrib{font-size:12px;color:var(--text-faint);margin-top:14px;padding-top:10px;border-top:1px dashed var(--line)}
+.quiz{counter-reset:q}
+.q{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:12px 0;background:var(--bg)}
+.q-head{display:flex;gap:8px;align-items:baseline;margin-bottom:10px}
+.q-type{font-size:11px;padding:1px 7px;border-radius:999px;background:var(--line);color:var(--text-faint);white-space:nowrap}
+.q-stem{font-weight:600}
+.opts{list-style:none;margin:0;padding:0}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:7px 10px;margin:5px 0;border:1px solid var(--line);border-radius:8px;cursor:pointer;transition:background .12s,border-color .12s}
+.opt:hover{background:var(--line)}
+.opt .key{font-weight:700;color:var(--text-faint);min-width:1.2em}
+.opt.correct{border-color:#3f9c5a;background:rgba(63,156,90,.13)}
+.opt.wrong{border-color:#c0563f;background:rgba(192,86,63,.13)}
+.opt.locked{cursor:default}
+.opt.locked:hover{background:none}
+.opt.correct.locked:hover{background:rgba(63,156,90,.13)}
+.opt.wrong.locked:hover{background:rgba(192,86,63,.13)}
+.q-exp{display:none;margin-top:10px;padding:10px 12px;border-left:3px solid var(--accent);background:var(--card);border-radius:0 8px 8px 0;font-size:14px;line-height:1.75}
+.q.answered .q-exp{display:block}
+.glossary table{width:100%;border-collapse:collapse;font-size:14px}
+.glossary th,.glossary td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.glossary th{font-size:12px;color:var(--text-faint);font-weight:600}
+.glossary .w{font-weight:600;white-space:nowrap}
+.glossary .ph{color:var(--text-faint);font-size:13px;white-space:nowrap}
+.glossary .ref a{color:var(--text-faint);text-decoration:none;font-size:12px}
+@media (max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}}
+@media print{ #progress,.q-exp{display:none}.q.answered .q-exp{display:block}}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<div class="toolbar">
+  <span class="date">2026-08-06</span>
+  <span style="color:var(--text-faint)">5 篇 · 1761 词</span>
+  <span class="spacer"></span>
+  <button class="btn" id="toggle-zh" aria-pressed="false">隐藏中文</button>
+  <button class="btn" id="toggle-hl" aria-pressed="true">词汇高亮</button>
+  <button class="btn" onclick="window.print()">打印</button>
+</div>
+
+<div class="wrap">
+
+<header class="page">
+  <div class="sub">Today in English · TOEFL Reading Practice</div>
+  <h1>今日要闻</h1>
+<p class="intro">今天这一版全部取自公有领域与开放授权来源：NASA 讲巴西那片「看着像沙漠、其实年年积水成湖」的沙丘；ESA 用韦布望远镜打开船底座星云里的「宝箱」；伯克利谈西尼罗病毒为何随气温骤增；MIT 发现同一段 AI 解释对专家和外行的作用截然相反；剑桥拿到 5000 万英镑研究线粒体 DNA 疾病。题材覆盖地球科学、天文、公共卫生、科技与生命科学，正是托福阅读的主战场。</p>  <div class="stats">
+    <div class="stat"><b>5</b><span>篇精读</span></div>
+    <div class="stat"><b>30</b><span>个核心词</span></div>
+    <div class="stat"><b>15</b><span>道托福题</span></div>
+    <div class="stat"><b>12</b><span>分钟阅读</span></div>
+  </div>
+  <nav class="toc">
+    <ol>
+      <li><a href="#a1">千湖沙漠：马拉尼昂被单沙丘国家公园的悖论</a></li>
+      <li><a href="#a2">韦布望远镜打开了一只装满恒星的「宝箱」</a></li>
+      <li><a href="#a3">西尼罗病毒该有多担心？</a></li>
+      <li><a href="#a4">医疗 AI 的帮助有多大，取决于用的人是谁</a></li>
+      <li><a href="#a5">剑桥将牵头 5000 万英镑新中心，攻关线粒体 DNA 疾病</a></li>
+    </ol>
+  </nav>
+</header>
+
+<article class="card" id="a1">
+  <div class="meta">
+    <span>NASA</span>
+    <span class="tag">earth-science</span>
+    <span class="tag difficulty-medium">medium</span>
+    <span>474 words</span>
+<span class="lic lic-public-domain">public-domain</span>  </div>
+
+  <h2><a href="https://science.nasa.gov/earth/earth-observatory/the-paradox-of-lencois-maranhenses-national-park/" target="_blank" rel="noopener">The Paradox of Lençóis Maranhenses National Park</a></h2>
+  <p class="title-zh">千湖沙漠：马拉尼昂被单沙丘国家公园的悖论</p>
+<p class="summary-zh">它看起来是沙漠，年降水量却是伦敦的两倍——沙下一层不透水的基岩把雨水锁成了成千上万个淡水湖。</p>
+  <div class="passage">
+    <div class="para">
+      <p class="en">The coastal dune system in Lençóis Maranhenses National Park in northeastern Brazil is among the most <mark class="vocab" data-tip="surreal /səˈriːəl/
+adj. 超现实的；离奇得不像真的
+strange and dreamlike; unreal">surreal</mark> landscapes on Earth. At first glance, the park looks like a desert, but it is far from it. This place receives about 125 centimeters (50 inches) of rain per year—slightly more than Seattle and double what falls in London.</p>
+      <p class="zh">巴西东北部马拉尼昂被单沙丘国家公园的海岸沙丘系统，是地球上最超现实的景观之一。乍看之下这里像是沙漠，实则相去甚远。此地年降水量约 125 厘米（50 英寸）——略高于西雅图，是伦敦的两倍。</p>
+    </div>
+    <div class="para">
+      <p class="en">The result is a paradox: rows of sparkling white quartz dunes, some rising 30 meters (100 feet), soar over a mosaic of blue and green freshwater lagoons. The park&#x27;s name stems from the Portuguese word lençóis, meaning “bedsheets,” a reference that makes the most sense when the park is viewed from afar. From that perspective, the sweeping curves of the largest coastal dune field in South America resemble a rumpled, white bedsheet.</p>
+      <p class="zh">结果便是一个悖论：一道道闪着白光的石英沙丘，有的高达 30 米（100 英尺），高高耸立在蓝绿相间、如马赛克般铺开的淡水湖群之上。公园的名字源自葡萄牙语 lençóis，意为「被单」——这个比喻只有从远处眺望时才最说得通。从那个视角看去，这片南美最大海岸沙丘带舒展的曲线，就像一张揉皱的白色床单。</p>
+    </div>
+    <div class="para">
+      <p class="en">These Landsat 9 images were captured in June 2026, around the time when lagoon water levels typically peak. The partially <mark class="vocab" data-tip="impermeable /ɪmˈpɜːmiəbl/
+adj. 不透水的；不渗透的
+not allowing liquid to pass through">impermeable</mark> layer of bedrock and clay beneath the sand prevents the lagoons from draining during the wet season. However, as rains <mark class="vocab" data-tip="subside /səbˈsaɪd/
+v. （雨、风、情绪等）减弱、平息
+to become less intense or die down">subside</mark> between August and November, the water table falls, and by December, most of the lagoons dry up.</p>
+      <p class="zh">这些陆地卫星 9 号影像拍摄于 2026 年 6 月，正值湖水水位通常达到峰值的时节。沙层之下那层部分不透水的基岩与黏土，使湖水在雨季无法下渗流失。然而随着 8 月至 11 月间降雨减弱，地下水位随之下降，到 12 月，大多数湖泊都会干涸。</p>
+    </div>
+    <div class="para">
+      <p class="en">The dune field, a tan area within an expanse of green, is the centerpiece of the park. It spans about 900 square kilometers (350 square miles), roughly the size of New York City. From above, shallower lagoons appear light blue, often taking on turquoise or aquamarine hues as sunlight reflects off the sand below. Deeper lagoons are darker, a result of the deeper water absorbing more red, yellow, and green wavelengths, leaving mostly blue light to scatter back. Suspended sediment, microscopic algae, and dissolved organic matter also contribute to the <mark class="vocab" data-tip="array /əˈreɪ/
+n. 一系列；大量各式各样的
+a large and varied group of things">array</mark> of colors, giving some lagoons greener and browner tones.</p>
+      <p class="zh">这片沙丘带是一大片绿色之中的褐黄色区域，也是公园的核心。它绵延约 900 平方公里（350 平方英里），面积大致相当于纽约市。从高空俯瞰，较浅的湖泊呈浅蓝色，阳光从湖底沙面反射上来时，常常泛出绿松石色或海蓝色。较深的湖泊颜色更暗，这是因为更深的水吸收了更多红、黄、绿波段的光，只剩下蓝光散射回来。悬浮泥沙、微观藻类和溶解有机质也共同造就了这一系列色彩，使某些湖泊偏绿、偏褐。</p>
+    </div>
+    <div class="para">
+      <p class="en">The dune field exists because of the rare <mark class="vocab" data-tip="convergence /kənˈvɜːdʒəns/
+n. 汇合；聚集于一处
+the coming together of separate things">convergence</mark> of geologic and climatic conditions. Rivers, including the Mearim and Parnaíba, deliver the key ingredient—quartz sand—to this unusually flat portion of the Maranhão coastline in massive quantities. It has accumulated here over the past few hundred thousand years driven in part by fluctuating sea levels and shoreline transgression and regression. Persistent easterly trade winds have also played a critical role. During the dry season, winds often reach at least 50 kilometers per hour, fast enough to build the dunes and push them westward at a pace of roughly 4 to 25 meters per year.</p>
+      <p class="zh">这片沙丘带之所以存在，源于地质与气候条件的罕见汇合。梅亚林河、帕尔奈巴河等河流，把关键原料——石英砂——大量输送到马拉尼昂海岸这段异常平坦的地带。在过去几十万年里，沙子在此不断堆积，部分动力来自海平面的涨落以及海岸线的进退。持续吹拂的东风信风同样起了关键作用。旱季时风速常达每小时至少 50 公里，足以堆起沙丘，并以每年约 4 至 25 米的速度把它们推向西方。</p>
+    </div>
+    <div class="para">
+      <p class="en">UNESCO declared the park a World Heritage site in 2024, citing its remarkable geology and rich biodiversity. The park is home to more than 850 documented species, including fish, birds, reptiles, mammals, and phytoplankton. Among the lagoons&#x27; most remarkable inhabitants are the trahira (Hoplias malabaricus), a predatory fish species with large canine-like teeth. During the dry season, it burrows far enough under the sand to find damp mud, where it enters a <mark class="vocab" data-tip="dormant /ˈdɔːmənt/
+adj. 休眠的；蛰伏的
+temporarily inactive, as if asleep">dormant</mark> state, emerging after the rains to hunt insects and other fish.</p>
+      <p class="zh">联合国教科文组织于 2024 年将该公园列为世界遗产，理由是其非凡的地质构造与丰富的生物多样性。公园内已记录物种超过 850 种，包括鱼类、鸟类、爬行动物、哺乳动物和浮游植物。湖中最引人注目的住客之一是狼鱼（学名 Hoplias malabaricus），一种长着犬齿般大牙的掠食性鱼类。旱季时它会向沙下钻得足够深，直到找到潮湿的泥层，在那里进入休眠状态，待雨水回归后再钻出来捕食昆虫和其他鱼类。</p>
+    </div>
+  </div>
+
+  <section class="study">
+    <h3>托福核心词</h3>
+    <table class="vocab-table">
+      <tr>
+        <td class="v-word">surreal</td>
+        <td class="v-phon">/səˈriːəl/</td>
+        <td class="v-pos">adj.</td>
+        <td>
+          <span class="v-zh">超现实的；离奇得不像真的</span>
+<div class="v-en">strange and dreamlike; unreal</div>          <div class="v-ctx">The coastal dune system in Lençóis Maranhenses National Park in northeastern Brazil is among the most surreal landscapes on Earth.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">impermeable</td>
+        <td class="v-phon">/ɪmˈpɜːmiəbl/</td>
+        <td class="v-pos">adj.</td>
+        <td>
+          <span class="v-zh">不透水的；不渗透的</span>
+<div class="v-en">not allowing liquid to pass through</div>          <div class="v-ctx">The partially impermeable layer of bedrock and clay beneath the sand prevents the lagoons from draining during the wet season.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">subside</td>
+        <td class="v-phon">/səbˈsaɪd/</td>
+        <td class="v-pos">v.</td>
+        <td>
+          <span class="v-zh">（雨、风、情绪等）减弱、平息</span>
+<div class="v-en">to become less intense or die down</div>          <div class="v-ctx">However, as rains subside between August and November, the water table falls, and by December, most of the lagoons dry up.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">array</td>
+        <td class="v-phon">/əˈreɪ/</td>
+        <td class="v-pos">n.</td>
+        <td>
+          <span class="v-zh">一系列；大量各式各样的</span>
+<div class="v-en">a large and varied group of things</div>          <div class="v-ctx">Suspended sediment, microscopic algae, and dissolved organic matter also contribute to the array of colors.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">convergence</td>
+        <td class="v-phon">/kənˈvɜːdʒəns/</td>
+        <td class="v-pos">n.</td>
+        <td>
+          <span class="v-zh">汇合；聚集于一处</span>
+<div class="v-en">the coming together of separate things</div>          <div class="v-ctx">The dune field exists because of the rare convergence of geologic and climatic conditions.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">dormant</td>
+        <td class="v-phon">/ˈdɔːmənt/</td>
+        <td class="v-pos">adj.</td>
+        <td>
+          <span class="v-zh">休眠的；蛰伏的</span>
+<div class="v-en">temporarily inactive, as if asleep</div>          <div class="v-ctx">During the dry season, it burrows far enough under the sand to find damp mud, where it enters a dormant state.</div>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="study">
+    <h3>长难句拆解</h3>
+    <div class="sentence">
+      <p class="s-orig">The partially impermeable layer of bedrock and clay beneath the sand prevents the lagoons from draining during the wet season.</p>
+      <div class="s-backbone">
+        <span class="label">主干</span>
+        The layer prevents the lagoons from draining.
+<div class="bb-zh">这一岩层阻止湖水流失。</div>      </div>
+      <ol class="breakdown">
+        <li>
+          <span class="part">The partially impermeable layer of bedrock and clay</span><span class="role">主语</span>
+<span class="note">中心词是 layer，of 短语说明它由什么构成。</span>        </li>
+        <li>
+          <span class="part">beneath the sand</span><span class="role">后置定语</span>
+<span class="note">介词短语继续修饰 layer，说明位置，不是句子的状语。</span>        </li>
+        <li>
+          <span class="part">prevents the lagoons from draining</span><span class="role">谓语 + 宾语 + 介词补足</span>
+<span class="note">prevent sb./sth. from doing 是固定搭配。</span>        </li>
+        <li>
+          <span class="part">during the wet season</span><span class="role">时间状语</span>
+        </li>
+      </ol>
+      <p class="s-trans">沙层之下那层部分不透水的基岩与黏土，使湖水在雨季无法下渗流失。</p>
+    </div>
+    <div class="sentence">
+      <p class="s-orig">Deeper lagoons are darker, a result of the deeper water absorbing more red, yellow, and green wavelengths, leaving mostly blue light to scatter back.</p>
+      <div class="s-backbone">
+        <span class="label">主干</span>
+        Deeper lagoons are darker.
+<div class="bb-zh">更深的湖颜色更暗。</div>      </div>
+      <ol class="breakdown">
+        <li>
+          <span class="part">Deeper lagoons are darker</span><span class="role">主句</span>
+<span class="note">主干极短，后面全是解释。</span>        </li>
+        <li>
+          <span class="part">a result of the deeper water absorbing more red, yellow, and green wavelengths</span><span class="role">同位语</span>
+<span class="note">对整个主句作补充说明，等于 which is a result of…。</span>        </li>
+        <li>
+          <span class="part">the deeper water absorbing</span><span class="role">动名词复合结构</span>
+<span class="note">the deeper water 是 absorbing 的逻辑主语，不要误读成谓语。</span>        </li>
+        <li>
+          <span class="part">leaving mostly blue light to scatter back</span><span class="role">现在分词作结果状语</span>
+<span class="note">表示前面吸收之后自然导致的结果。</span>        </li>
+      </ol>
+      <p class="s-trans">较深的湖泊颜色更暗，这是因为更深的水吸收了更多红、黄、绿波段的光，只剩下蓝光散射回来。</p>
+    </div>
+  </section>
+
+  <section class="study quiz">
+    <h3>阅读理解</h3>
+    <div class="q" data-answer="1">
+      <div class="q-head">
+        <span class="q-type">factual</span>
+        <span class="q-stem">1. According to the passage, why do the lagoons NOT drain away during the wet season?</span>
+      </div>
+      <ul class="opts">
+        <li class="opt" data-index="0" role="button" tabindex="0">
+          <span class="key">A</span><span>The rainfall is so heavy that it replaces any water that drains away.</span>
+        </li>
+        <li class="opt" data-index="1" role="button" tabindex="0">
+          <span class="key">B</span><span>A partially impermeable layer of bedrock and clay lies beneath the sand.</span>
+        </li>
+        <li class="opt" data-index="2" role="button" tabindex="0">
+          <span class="key">C</span><span>The dunes surrounding each lagoon are too high for water to escape.</span>
+        </li>
+        <li class="opt" data-index="3" role="button" tabindex="0">
+          <span class="key">D</span><span>Mangrove and restinga forests absorb the water before it can drain.</span>
+        </li>
+      </ul>
+      <div class="q-exp"><b>解析：</b>第三段明确说 The partially impermeable layer of bedrock and clay beneath the sand prevents the lagoons from draining。A 项的降雨量虽在文中出现，但文章说的是「水排不掉」而非「补得快」，属于偷换因果；C、D 项文中均未提及。</div>
+    </div>
+    <div class="q" data-answer="1">
+      <div class="q-head">
+        <span class="q-type">vocabulary</span>
+        <span class="q-stem">2. The word “subside” in the passage is closest in meaning to</span>
+      </div>
+      <ul class="opts">
+        <li class="opt" data-index="0" role="button" tabindex="0">
+          <span class="key">A</span><span>become more frequent</span>
+        </li>
+        <li class="opt" data-index="1" role="button" tabindex="0">
+          <span class="key">B</span><span>grow weaker</span>
+        </li>
+        <li class="opt" data-index="2" role="button" tabindex="0">
+          <span class="key">C</span><span>change direction</span>
+        </li>
+        <li class="opt" data-index="3" role="button" tabindex="0">
+          <span class="key">D</span><span>spread inland</span>
+        </li>
+      </ul>
+      <div class="q-exp"><b>解析：</b>subside 指（雨、风、疼痛、情绪等）减弱、平息。原句后半句说地下水位随之下降、湖泊干涸，反向印证降雨是「变少」而不是「变多」。托福常考的近义替换是 diminish / abate / let up。</div>
+    </div>
+    <div class="q" data-answer="2">
+      <div class="q-head">
+        <span class="q-type">inference</span>
+        <span class="q-stem">3. It can be inferred from the passage that vegetation would be more likely to take hold in the dune field if</span>
+      </div>
+      <ul class="opts">
+        <li class="opt" data-index="0" role="button" tabindex="0">
+          <span class="key">A</span><span>the region received significantly less rainfall each year</span>
+        </li>
+        <li class="opt" data-index="1" role="button" tabindex="0">
+          <span class="key">B</span><span>the lagoons remained full throughout the entire year</span>
+        </li>
+        <li class="opt" data-index="2" role="button" tabindex="0">
+          <span class="key">C</span><span>the trade winds weakened so that the sand stopped moving</span>
+        </li>
+        <li class="opt" data-index="3" role="button" tabindex="0">
+          <span class="key">D</span><span>the rivers delivered even larger quantities of quartz sand</span>
+        </li>
+      </ul>
+      <div class="q-exp"><b>解析：</b>文章说持续的东风信风推动沙丘每年西移 4 至 25 米，正是沙的近乎持续移动使植被难以在沙丘带扎根。风一旦减弱、沙停止移动，植被自然更容易立足。D 项反而会加剧沙的堆积与移动。</div>
+    </div>
+  </section>
+
+  <p class="attrib">来源：<a href="https://science.nasa.gov/earth/earth-observatory/the-paradox-of-lencois-maranhenses-national-park/" target="_blank" rel="noopener">NASA Earth Observatory (public domain)</a></p>
+</article>
+<article class="card" id="a2">
+  <div class="meta">
+    <span>ESA</span>
+    <span class="tag">astronomy</span>
+    <span class="tag difficulty-medium">medium</span>
+    <span>445 words</span>
+<span class="lic lic-cc-by-sa">cc-by-sa</span>  </div>
+
+  <h2><a href="https://www.esa.int/ESA_Multimedia/Images/2026/08/Webb_opens_a_Treasure_Chest_filled_with_stars" target="_blank" rel="noopener">Webb opens a Treasure Chest filled with stars</a></h2>
+  <p class="title-zh">韦布望远镜打开了一只装满恒星的「宝箱」</p>
+<p class="summary-zh">船底座星云里一团形似敞盖木箱的彗状球状体，箱中装的不是珠宝，而是约 70 颗尚在襁褓中的年轻恒星。</p>
+  <div class="passage">
+    <div class="para">
+      <p class="en">This NASA/ESA/CSA James Webb Space Telescope Picture of the Month takes us to a fantastical realm within our home galaxy, where piercing starlight and billowing winds <mark class="vocab" data-tip="sculpt /skʌlpt/
+v. 雕琢；塑造出……的形状
+to shape something carefully, as a sculptor does">sculpt</mark> dust clouds into inventive shapes. This scene is from the Carina Nebula, which lies just 7500 light-years away in the constellation Carina (the Keel).</p>
+      <p class="zh">这张 NASA／ESA／CSA 詹姆斯·韦布空间望远镜「本月图像」带我们走进本星系内一处奇幻天地：锐利的星光与翻涌的星风，把尘埃云雕琢成种种别出心裁的形状。此景取自船底座星云——它就位于船底座（龙骨座）方向，距我们仅 7500 光年。</p>
+    </div>
+    <div class="para">
+      <p class="en">Spanning roughly 260 light-years, the nebula is home to an incredible collection of objects, including the Cosmic Cliffs revealed in the first-ever Webb image release. The Carina Nebula is also the nearest high-mass star-forming region that allows astronomers to study the full range of star formation. This nebula houses some of the most massive stars in our galaxy as well as tens of thousands of protostars, offering a valuable opportunity to understand how stars shape their neighbourhoods.</p>
+      <p class="zh">这片星云横跨约 260 光年，内部天体阵容惊人，其中就包括韦布首批公开图像中那道著名的「宇宙悬崖」。船底座星云还是距离我们最近的大质量恒星形成区，天文学家得以在此研究恒星形成的全过程。星云中既有银河系里最重的一批恒星，也有数以万计的原恒星，为理解恒星如何塑造自身周边环境提供了宝贵机会。</p>
+    </div>
+    <div class="para">
+      <p class="en">The feature highlighted in today&#x27;s image, <mark class="vocab" data-tip="aptly /ˈæptli/
+adv. 贴切地；恰如其分地
+in a way that is suitable or fitting">aptly</mark> called the Treasure Chest, looks right at home in this celestial sculpture garden. The Treasure Chest is what&#x27;s known as a cometary globule. A cometary globule is an isolated cloud of gas and dust with a dense, dark head and a sweeping tail. These clouds often somewhat resemble comets, but the Treasure Chest looks distinctly like a wooden chest with its lid wide open.</p>
+      <p class="zh">今天这张图着重呈现的天体名为「宝箱」，这个名字取得贴切，它安然置身于这座天上的雕塑园中毫不违和。「宝箱」属于所谓的彗状球状体——一团孤立的气体尘埃云，有着致密的暗色头部和一条长长拖曳的尾巴。这类云团往往形似彗星，但「宝箱」看上去分明就是一只盖子大敞的木箱。</p>
+    </div>
+    <div class="para">
+      <p class="en">However, this chest doesn&#x27;t contain jewels or gold coins, but instead a <mark class="vocab" data-tip="compact /kəmˈpækt/
+adj. 紧凑的；致密的
+closely and neatly packed into a small space">compact</mark> cluster of young stars. These stars are responsible for the otherworldly glow coming from within the Treasure Chest, revealed by Webb&#x27;s sensitive Near-Infrared Camera (NIRCam). Researchers estimate that the Treasure Chest&#x27;s cluster contains about 70 stars, the most massive of which is a rare O-type star roughly 19 times as massive as the Sun.</p>
+      <p class="zh">不过这只箱子里装的不是珠宝或金币，而是一个致密的年轻星团。箱内那股超凡脱俗的辉光正来自这些恒星，由韦布灵敏的近红外相机（NIRCam）揭示出来。研究者估计，「宝箱」中的星团约含 70 颗恒星，其中质量最大的是一颗罕见的 O 型星，质量约为太阳的 19 倍。</p>
+    </div>
+    <div class="para">
+      <p class="en">The star cluster is likely around 1.3 million years old, though earlier estimates found it to be as young as just 100 000 years old. Because of its youth, the cluster is still deeply <mark class="vocab" data-tip="embedded /ɪmˈbedɪd/
+adj. 深嵌其中的；埋在……里面的
+fixed firmly inside something surrounding it">embedded</mark> within the dusty clouds of the Treasure Chest. The individual stars in the cluster are wrapped up in dust as well; astronomers have found evidence that many of these stars are surrounded by circumstellar discs. Over time, the brilliant starlight from these young stars will <mark class="vocab" data-tip="dissipate /ˈdɪsɪpeɪt/
+v. 驱散；使逐渐消散
+to scatter and gradually disappear">dissipate</mark> the surrounding cloud and reveal the entire cluster.</p>
+      <p class="zh">这个星团年龄大约 130 万年，尽管早先的估计认为它只有区区 10 万岁。正因年轻，星团至今仍深深嵌在「宝箱」的尘埃云中。团内的单颗恒星同样被尘埃裹住；天文学家已找到证据，表明其中许多恒星周围环绕着星周盘。随着时间推移，这些年轻恒星耀眼的星光终将驱散周围的云气，让整个星团显露出来。</p>
+    </div>
+    <div class="para">
+      <p class="en">The key to the Treasure Chest&#x27;s sculptural shape lies outside this image: just 39 light-years to the northwest, as measured on the sky, sits Eta Carinae, the most <mark class="vocab" data-tip="luminous /ˈluːmɪnəs/
+adj. 发光的；明亮的（天文中指「光度大的」）
+giving off light; bright">luminous</mark> object in the entire Carina Nebula. Eta Carinae is a star system containing at least two stars, one of which is 100 times as massive as the Sun. This star alone is about 5 million times as <mark class="vocab" data-tip="luminous /ˈluːmɪnəs/
+adj. 发光的；明亮的（天文中指「光度大的」）
+giving off light; bright">luminous</mark> as the Sun. Adding to this intense radiation is the nearby star cluster Trumpler 16, which also contains several extremely hot massive stars.</p>
+      <p class="zh">「宝箱」之所以呈现出这般雕塑感，关键其实在画面之外：在天球上向西北仅 39 光年处，坐落着海山二——整个船底座星云中最明亮的天体。海山二是一个至少包含两颗恒星的星系统，其中一颗质量是太阳的 100 倍，单这一颗的光度就约为太阳的 500 万倍。为这股强烈辐射再添一把火的，是附近的星团 Trumpler 16，那里同样藏着若干极热的大质量恒星。</p>
+    </div>
+  </div>
+
+  <section class="study">
+    <h3>托福核心词</h3>
+    <table class="vocab-table">
+      <tr>
+        <td class="v-word">sculpt</td>
+        <td class="v-phon">/skʌlpt/</td>
+        <td class="v-pos">v.</td>
+        <td>
+          <span class="v-zh">雕琢；塑造出……的形状</span>
+<div class="v-en">to shape something carefully, as a sculptor does</div>          <div class="v-ctx">…where piercing starlight and billowing winds sculpt dust clouds into inventive shapes.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">aptly</td>
+        <td class="v-phon">/ˈæptli/</td>
+        <td class="v-pos">adv.</td>
+        <td>
+          <span class="v-zh">贴切地；恰如其分地</span>
+<div class="v-en">in a way that is suitable or fitting</div>          <div class="v-ctx">The feature highlighted in today&#39;s image, aptly called the Treasure Chest, looks right at home in this celestial sculpture garden.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">compact</td>
+        <td class="v-phon">/kəmˈpækt/</td>
+        <td class="v-pos">adj.</td>
+        <td>
+          <span class="v-zh">紧凑的；致密的</span>
+<div class="v-en">closely and neatly packed into a small space</div>          <div class="v-ctx">However, this chest doesn&#39;t contain jewels or gold coins, but instead a compact cluster of young stars.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">embedded</td>
+        <td class="v-phon">/ɪmˈbedɪd/</td>
+        <td class="v-pos">adj.</td>
+        <td>
+          <span class="v-zh">深嵌其中的；埋在……里面的</span>
+<div class="v-en">fixed firmly inside something surrounding it</div>          <div class="v-ctx">Because of its youth, the cluster is still deeply embedded within the dusty clouds of the Treasure Chest.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">dissipate</td>
+        <td class="v-phon">/ˈdɪsɪpeɪt/</td>
+        <td class="v-pos">v.</td>
+        <td>
+          <span class="v-zh">驱散；使逐渐消散</span>
+<div class="v-en">to scatter and gradually disappear</div>          <div class="v-ctx">Over time, the brilliant starlight from these young stars will dissipate the surrounding cloud and reveal the entire cluster.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">luminous</td>
+        <td class="v-phon">/ˈluːmɪnəs/</td>
+        <td class="v-pos">adj.</td>
+        <td>
+          <span class="v-zh">发光的；明亮的（天文中指「光度大的」）</span>
+<div class="v-en">giving off light; bright</div>          <div class="v-ctx">…sits Eta Carinae, the most luminous object in the entire Carina Nebula.</div>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="study">
+    <h3>长难句拆解</h3>
+    <div class="sentence">
+      <p class="s-orig">This NASA/ESA/CSA James Webb Space Telescope Picture of the Month takes us to a fantastical realm within our home galaxy, where piercing starlight and billowing winds sculpt dust clouds into inventive shapes.</p>
+      <div class="s-backbone">
+        <span class="label">主干</span>
+        This Picture of the Month takes us to a realm.
+<div class="bb-zh">这张「本月图像」把我们带到一处天地。</div>      </div>
+      <ol class="breakdown">
+        <li>
+          <span class="part">This NASA/ESA/CSA James Webb Space Telescope Picture of the Month</span><span class="role">主语</span>
+<span class="note">一长串专名全部是修饰语，中心词其实只是 Picture。</span>        </li>
+        <li>
+          <span class="part">takes us to a fantastical realm</span><span class="role">谓语 + 宾语 + 地点补足</span>
+        </li>
+        <li>
+          <span class="part">within our home galaxy</span><span class="role">后置定语</span>
+<span class="note">修饰 realm，不是修饰 takes。</span>        </li>
+        <li>
+          <span class="part">where piercing starlight and billowing winds sculpt dust clouds into inventive shapes</span><span class="role">定语从句</span>
+<span class="note">where 引导，先行词是 realm；从句主语是并列的 starlight 和 winds。</span>        </li>
+      </ol>
+      <p class="s-trans">这张韦布空间望远镜「本月图像」带我们走进本星系内一处奇幻天地：锐利的星光与翻涌的星风，把尘埃云雕琢成种种别出心裁的形状。</p>
+    </div>
+    <div class="sentence">
+      <p class="s-orig">The key to the Treasure Chest&#39;s sculptural shape lies outside this image: just 39 light-years to the northwest, as measured on the sky, sits Eta Carinae, the most luminous object in the entire Carina Nebula.</p>
+      <div class="s-backbone">
+        <span class="label">主干</span>
+        The key lies outside this image; Eta Carinae sits 39 light-years to the northwest.
+<div class="bb-zh">关键在画面之外：海山二就坐落在西北 39 光年处。</div>      </div>
+      <ol class="breakdown">
+        <li>
+          <span class="part">The key to the Treasure Chest&#39;s sculptural shape</span><span class="role">主语</span>
+        </li>
+        <li>
+          <span class="part">lies outside this image</span><span class="role">谓语 + 地点状语</span>
+        </li>
+        <li>
+          <span class="part">just 39 light-years to the northwest</span><span class="role">地点状语前置</span>
+<span class="note">状语提到句首，触发了后面的完全倒装。</span>        </li>
+        <li>
+          <span class="part">as measured on the sky</span><span class="role">插入语</span>
+<span class="note">省略结构，等于 as it is measured on the sky。</span>        </li>
+        <li>
+          <span class="part">sits Eta Carinae</span><span class="role">完全倒装</span>
+<span class="note">真正的主语是 Eta Carinae，谓语 sits 提到了主语之前。</span>        </li>
+        <li>
+          <span class="part">the most luminous object in the entire Carina Nebula</span><span class="role">同位语</span>
+<span class="note">进一步说明 Eta Carinae。</span>        </li>
+      </ol>
+      <p class="s-trans">「宝箱」之所以呈现出这般雕塑感，关键其实在画面之外：在天球上向西北仅 39 光年处，坐落着海山二——整个船底座星云中最明亮的天体。</p>
+    </div>
+  </section>
+
+  <section class="study quiz">
+    <h3>阅读理解</h3>
+    <div class="q" data-answer="1">
+      <div class="q-head">
+        <span class="q-type">factual</span>
+        <span class="q-stem">1. According to the passage, what is a cometary globule?</span>
+      </div>
+      <ul class="opts">
+        <li class="opt" data-index="0" role="button" tabindex="0">
+          <span class="key">A</span><span>A comet that passes through a star-forming region.</span>
+        </li>
+        <li class="opt" data-index="1" role="button" tabindex="0">
+          <span class="key">B</span><span>An isolated cloud of gas and dust with a dense head and a sweeping tail.</span>
+        </li>
+        <li class="opt" data-index="2" role="button" tabindex="0">
+          <span class="key">C</span><span>A cluster of about 70 young stars bound together by gravity.</span>
+        </li>
+        <li class="opt" data-index="3" role="button" tabindex="0">
+          <span class="key">D</span><span>A disc of dust and gas surrounding a newly formed star.</span>
+        </li>
+      </ul>
+      <div class="q-exp"><b>解析：</b>第三段给出了定义句：A cometary globule is an isolated cloud of gas and dust with a dense, dark head and a sweeping tail。A 项把「形似彗星」误读成「就是彗星」；C 项是箱内的星团；D 项是文中另提的 circumstellar discs（星周盘）。</div>
+    </div>
+    <div class="q" data-answer="2">
+      <div class="q-head">
+        <span class="q-type">inference</span>
+        <span class="q-stem">2. It can be inferred from the passage that the entire star cluster is not yet fully visible because</span>
+      </div>
+      <ul class="opts">
+        <li class="opt" data-index="0" role="button" tabindex="0">
+          <span class="key">A</span><span>it is too far away for Webb&#39;s instruments to resolve</span>
+        </li>
+        <li class="opt" data-index="1" role="button" tabindex="0">
+          <span class="key">B</span><span>its stars are not massive enough to emit visible light</span>
+        </li>
+        <li class="opt" data-index="2" role="button" tabindex="0">
+          <span class="key">C</span><span>it is young enough to still be buried in the dust that formed it</span>
+        </li>
+        <li class="opt" data-index="3" role="button" tabindex="0">
+          <span class="key">D</span><span>Eta Carinae&#39;s radiation outshines the cluster&#39;s own light</span>
+        </li>
+      </ul>
+      <div class="q-exp"><b>解析：</b>第五段说 Because of its youth, the cluster is still deeply embedded within the dusty clouds，并预告 Over time…will dissipate the surrounding cloud and reveal the entire cluster——遮住星团的是尘埃，而尘埃迟早会被吹散。A 项与文中「仅 7500 光年」矛盾；B、D 项文中无据。</div>
+    </div>
+    <div class="q" data-answer="2">
+      <div class="q-head">
+        <span class="q-type">vocabulary</span>
+        <span class="q-stem">3. The word “dissipate” in the passage is closest in meaning to</span>
+      </div>
+      <ul class="opts">
+        <li class="opt" data-index="0" role="button" tabindex="0">
+          <span class="key">A</span><span>compress</span>
+        </li>
+        <li class="opt" data-index="1" role="button" tabindex="0">
+          <span class="key">B</span><span>illuminate</span>
+        </li>
+        <li class="opt" data-index="2" role="button" tabindex="0">
+          <span class="key">C</span><span>disperse</span>
+        </li>
+        <li class="opt" data-index="3" role="button" tabindex="0">
+          <span class="key">D</span><span>ignite</span>
+        </li>
+      </ul>
+      <div class="q-exp"><b>解析：</b>dissipate 意为使（云、雾、能量）逐渐消散、驱散，与 disperse 最接近。此处指年轻恒星的星光最终把包裹星团的云气吹散。注意 illuminate（照亮）是干扰项——它符合「星光」的语境，却不符合「云被弄没了」这一结果。</div>
+    </div>
+  </section>
+
+  <p class="attrib">来源：<a href="https://www.esa.int/ESA_Multimedia/Images/2026/08/Webb_opens_a_Treasure_Chest_filled_with_stars" target="_blank" rel="noopener">European Space Agency, CC BY-SA 3.0 IGO</a></p>
+</article>
+<article class="card" id="a3">
+  <div class="meta">
+    <span>UC Berkeley News</span>
+    <span class="tag">public-health</span>
+    <span class="tag difficulty-medium">medium</span>
+    <span>374 words</span>
+<span class="lic lic-press-release">press-release</span>  </div>
+
+  <h2><a href="https://publichealth.berkeley.edu/articles/news/commentary/how-worried-should-you-be-about-west-nile-virus" target="_blank" rel="noopener">How worried should you be about West Nile virus?</a></h2>
+  <p class="title-zh">西尼罗病毒该有多担心？</p>
+<p class="summary-zh">加州今年阳性蚊群数量是去年的十倍。伯克利的研究发现，传播强度在 70～73℉ 附近存在一个陡峭的温度门槛。</p>
+  <div class="passage">
+    <div class="para">
+      <p class="en">Now, as professor and chair of the Division of Environmental Health Sciences at the UC Berkeley School of Public Health, Dr. Remais is noting another sharp rise in California&#x27;s West Nile virus activity. The state has recorded more than 250 dead birds that tested positive for West Nile virus as of mid-July, a striking increase from just 50 recorded last year at this time. In Los Angeles County, there were 67 positive mosquito pools – a group of captured mosquitos that tested positive for the virus – compared to just 6 at this same time in 2025, a tenfold increase.</p>
+      <p class="zh">如今，身为加州大学伯克利分校公共卫生学院环境健康科学部教授兼主任，雷迈斯博士注意到加州的西尼罗病毒活动再度急剧上升。截至 7 月中旬，全州已记录到 250 多只病毒检测呈阳性的死鸟，而去年同期仅有 50 只，增幅惊人。在洛杉矶县，检测呈阳性的蚊群（即一组捕获后检出病毒的蚊子）达到 67 组，而 2025 年同期仅 6 组，增至十倍。</p>
+    </div>
+    <div class="para">
+      <p class="en">West Nile virus is the leading cause of mosquito-borne disease in the <mark class="vocab" data-tip="contiguous /kənˈtɪɡjuəs/
+adj. 接壤的；毗连的（美国语境中常指「本土 48 州」）
+sharing a common border; adjoining">contiguous</mark> United States. It is spread to people through the bite of an infected mosquito. While most people who become infected do not develop symptoms, the virus can cause severe, sometimes <mark class="vocab" data-tip="fatal /ˈfeɪtl/
+adj. 致命的；导致死亡的
+causing death">fatal</mark>, neurological illnesses, such as encephalitis (inflammation of the brain) or meningitis (inflammation of the membranes surrounding the brain and spinal cord). Less than 1% of infected people develop severe neurologic disease, which can result in long-term disability or death.</p>
+      <p class="zh">西尼罗病毒是美国本土最主要的蚊媒疾病病因，通过带毒蚊子的叮咬传播给人。虽然大多数感染者不会出现症状，但该病毒可引发严重甚至致命的神经系统疾病，例如脑炎（脑组织炎症）或脑膜炎（包裹脑与脊髓的膜发生炎症）。感染者中不到 1% 会发展为严重的神经系统疾病，而这可能导致长期残疾或死亡。</p>
+    </div>
+    <div class="para">
+      <p class="en">West Nile virus is transmitted to people <mark class="vocab" data-tip="predominantly /prɪˈdɒmɪnəntli/
+adv. 主要地；在很大程度上
+mainly; for the most part">predominantly</mark> through the bites of infected mosquitoes, especially the Culex species. Mosquitoes become infected when they feed on infected birds, including robins, jays, and crows. The virus is picked up by the mosquito and is transmitted in its saliva when it bites a person or another animal.</p>
+      <p class="zh">西尼罗病毒主要通过带毒蚊子（尤其是库蚊属）的叮咬传播给人。蚊子则是在吸食带毒鸟类（包括知更鸟、松鸦和乌鸦）的血液时被感染。病毒被蚊子摄入体内，当它叮咬人或其他动物时，随唾液一同传入。</p>
+    </div>
+    <div class="para">
+      <p class="en">Because the spread of West Nile virus is closely linked to mosquitoes—which cycle in number with the seasons—it is considered a seasonal disease that increases in <mark class="vocab" data-tip="incidence /ˈɪnsɪdəns/
+n. 发生率；发病率
+the rate at which something occurs">incidence</mark> in the summer and continues into the fall.</p>
+      <p class="zh">由于西尼罗病毒的传播与蚊子密切相关，而蚊子的数量又随季节周期性变化，因此它被视为一种季节性疾病：夏季发病率上升，并一直延续到秋季。</p>
+    </div>
+    <div class="para">
+      <p class="en">Our research at UC Berkeley has shown that transmission of West Nile virus responds <mark class="vocab" data-tip="profoundly /prəˈfaʊndli/
+adv. 深刻地；极大程度地
+to a very great degree">profoundly</mark> to temperature. We found that infection with the virus among captured mosquitoes in the Los Angeles metropolitan area was strongly associated with the average temperature in the neighborhood. Our data revealed a sharp transition where—as temperatures shift between 70 to around 73 degrees Fahrenheit—the likelihood of capturing infected mosquitoes in Southern California neighborhoods increases sharply.</p>
+      <p class="zh">我们在伯克利的研究表明，西尼罗病毒的传播对温度极为敏感。我们发现，洛杉矶都会区捕获蚊子的带毒率，与所在街区的平均气温高度相关。数据显示出一个陡峭的转折：当气温在华氏 70 度至约 73 度之间变化时，在南加州街区捕获到带毒蚊子的可能性急剧上升。</p>
+    </div>
+    <div class="para">
+      <p class="en">This explains why certain coastal Southern California communities—where typical summer conditions often <mark class="vocab" data-tip="hover /ˈhɒvə/
+v. （在某数值附近）徘徊、逗留
+to stay close to a particular level or value">hover</mark> right at the boundary between favorable and inhibitory temperatures—seem to be protected some years, yet highly vulnerable in others.</p>
+      <p class="zh">这就解释了为什么南加州某些沿海社区——那里典型的夏季气温常常正好徘徊在「利于传播」与「抑制传播」的分界线上——有些年份似乎安然无恙，另一些年份却极为脆弱。</p>
+    </div>
+  </div>
+
+  <section class="study">
+    <h3>托福核心词</h3>
+    <table class="vocab-table">
+      <tr>
+        <td class="v-word">contiguous</td>
+        <td class="v-phon">/kənˈtɪɡjuəs/</td>
+        <td class="v-pos">adj.</td>
+        <td>
+          <span class="v-zh">接壤的；毗连的（美国语境中常指「本土 48 州」）</span>
+<div class="v-en">sharing a common border; adjoining</div>          <div class="v-ctx">West Nile virus is the leading cause of mosquito-borne disease in the contiguous United States.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">fatal</td>
+        <td class="v-phon">/ˈfeɪtl/</td>
+        <td class="v-pos">adj.</td>
+        <td>
+          <span class="v-zh">致命的；导致死亡的</span>
+<div class="v-en">causing death</div>          <div class="v-ctx">…the virus can cause severe, sometimes fatal, neurological illnesses.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">predominantly</td>
+        <td class="v-phon">/prɪˈdɒmɪnəntli/</td>
+        <td class="v-pos">adv.</td>
+        <td>
+          <span class="v-zh">主要地；在很大程度上</span>
+<div class="v-en">mainly; for the most part</div>          <div class="v-ctx">West Nile virus is transmitted to people predominantly through the bites of infected mosquitoes.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">incidence</td>
+        <td class="v-phon">/ˈɪnsɪdəns/</td>
+        <td class="v-pos">n.</td>
+        <td>
+          <span class="v-zh">发生率；发病率</span>
+<div class="v-en">the rate at which something occurs</div>          <div class="v-ctx">…it is considered a seasonal disease that increases in incidence in the summer and continues into the fall.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">profoundly</td>
+        <td class="v-phon">/prəˈfaʊndli/</td>
+        <td class="v-pos">adv.</td>
+        <td>
+          <span class="v-zh">深刻地；极大程度地</span>
+<div class="v-en">to a very great degree</div>          <div class="v-ctx">Our research at UC Berkeley has shown that transmission of West Nile virus responds profoundly to temperature.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">hover</td>
+        <td class="v-phon">/ˈhɒvə/</td>
+        <td class="v-pos">v.</td>
+        <td>
+          <span class="v-zh">（在某数值附近）徘徊、逗留</span>
+<div class="v-en">to stay close to a particular level or value</div>          <div class="v-ctx">…where typical summer conditions often hover right at the boundary between favorable and inhibitory temperatures.</div>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="study">
+    <h3>长难句拆解</h3>
+    <div class="sentence">
+      <p class="s-orig">Because the spread of West Nile virus is closely linked to mosquitoes—which cycle in number with the seasons—it is considered a seasonal disease that increases in incidence in the summer and continues into the fall.</p>
+      <div class="s-backbone">
+        <span class="label">主干</span>
+        Because the spread is linked to mosquitoes, it is considered a seasonal disease.
+<div class="bb-zh">因为传播与蚊子相关，它被视为季节性疾病。</div>      </div>
+      <ol class="breakdown">
+        <li>
+          <span class="part">Because the spread of West Nile virus is closely linked to mosquitoes</span><span class="role">原因状语从句</span>
+        </li>
+        <li>
+          <span class="part">which cycle in number with the seasons</span><span class="role">非限定性定语从句</span>
+<span class="note">由两个破折号隔开插入，修饰 mosquitoes；第一遍读可以先跳过。</span>        </li>
+        <li>
+          <span class="part">it is considered a seasonal disease</span><span class="role">主句</span>
+<span class="note">主语 it 回指前面的 West Nile virus。</span>        </li>
+        <li>
+          <span class="part">that increases in incidence in the summer and continues into the fall</span><span class="role">定语从句</span>
+<span class="note">修饰 disease，内部是 increases 和 continues 两个并列谓语。</span>        </li>
+      </ol>
+      <p class="s-trans">由于西尼罗病毒的传播与蚊子密切相关，而蚊子的数量又随季节周期性变化，因此它被视为一种季节性疾病：夏季发病率上升，并一直延续到秋季。</p>
+    </div>
+    <div class="sentence">
+      <p class="s-orig">This explains why certain coastal Southern California communities—where typical summer conditions often hover right at the boundary between favorable and inhibitory temperatures—seem to be protected some years, yet highly vulnerable in others.</p>
+      <div class="s-backbone">
+        <span class="label">主干</span>
+        This explains why certain communities seem to be protected some years, yet highly vulnerable in others.
+<div class="bb-zh">这解释了为什么某些社区有些年份安全、有些年份脆弱。</div>      </div>
+      <ol class="breakdown">
+        <li>
+          <span class="part">This explains</span><span class="role">主谓</span>
+        </li>
+        <li>
+          <span class="part">why certain coastal Southern California communities</span><span class="role">宾语从句主语部分</span>
+<span class="note">why 引导宾语从句，主语是 communities。</span>        </li>
+        <li>
+          <span class="part">where typical summer conditions often hover right at the boundary between favorable and inhibitory temperatures</span><span class="role">定语从句（破折号插入）</span>
+<span class="note">把宾语从句的主语和谓语硬生生隔开，是本句最难的地方。</span>        </li>
+        <li>
+          <span class="part">seem to be protected some years, yet highly vulnerable in others</span><span class="role">宾语从句的谓语</span>
+<span class="note">yet 表转折，后半部分省略了 seem to be。</span>        </li>
+      </ol>
+      <p class="s-trans">这就解释了为什么南加州某些沿海社区——那里典型的夏季气温常常正好徘徊在「利于传播」与「抑制传播」的分界线上——有些年份似乎安然无恙，另一些年份却极为脆弱。</p>
+    </div>
+  </section>
+
+  <section class="study quiz">
+    <h3>阅读理解</h3>
+    <div class="q" data-answer="1">
+      <div class="q-head">
+        <span class="q-type">factual</span>
+        <span class="q-stem">1. According to the passage, how do mosquitoes acquire West Nile virus?</span>
+      </div>
+      <ul class="opts">
+        <li class="opt" data-index="0" role="button" tabindex="0">
+          <span class="key">A</span><span>By biting people who are already infected.</span>
+        </li>
+        <li class="opt" data-index="1" role="button" tabindex="0">
+          <span class="key">B</span><span>By feeding on infected birds such as robins, jays, and crows.</span>
+        </li>
+        <li class="opt" data-index="2" role="button" tabindex="0">
+          <span class="key">C</span><span>By breeding in water contaminated with the virus.</span>
+        </li>
+        <li class="opt" data-index="3" role="button" tabindex="0">
+          <span class="key">D</span><span>By inheriting the virus from the previous generation.</span>
+        </li>
+      </ul>
+      <div class="q-exp"><b>解析：</b>第三段：Mosquitoes become infected when they feed on infected birds, including robins, jays, and crows。注意方向——鸟传蚊、蚊传人；A 项把传播链倒了过来。</div>
+    </div>
+    <div class="q" data-answer="3">
+      <div class="q-head">
+        <span class="q-type">negative-factual</span>
+        <span class="q-stem">2. All of the following are mentioned in the passage EXCEPT</span>
+      </div>
+      <ul class="opts">
+        <li class="opt" data-index="0" role="button" tabindex="0">
+          <span class="key">A</span><span>the proportion of infected people who develop severe neurologic disease</span>
+        </li>
+        <li class="opt" data-index="1" role="button" tabindex="0">
+          <span class="key">B</span><span>the number of positive mosquito pools recorded in Los Angeles County</span>
+        </li>
+        <li class="opt" data-index="2" role="button" tabindex="0">
+          <span class="key">C</span><span>the temperature range across which transmission risk rises sharply</span>
+        </li>
+        <li class="opt" data-index="3" role="button" tabindex="0">
+          <span class="key">D</span><span>the length of time the virus can survive inside a mosquito&#39;s saliva</span>
+        </li>
+      </ul>
+      <div class="q-exp"><b>解析：</b>A 对应 Less than 1%，B 对应 67 positive mosquito pools，C 对应 70 to around 73 degrees Fahrenheit。D 项虽然提到了 saliva（唾液），但文章只说病毒随唾液传出，从未提及病毒在唾液中能存活多久——这正是托福否定事实题最常见的「半个词面熟」陷阱。</div>
+    </div>
+    <div class="q" data-answer="1">
+      <div class="q-head">
+        <span class="q-type">inference</span>
+        <span class="q-stem">3. Which of the following best explains why some coastal communities are safe in certain years but not in others?</span>
+      </div>
+      <ul class="opts">
+        <li class="opt" data-index="0" role="button" tabindex="0">
+          <span class="key">A</span><span>Mosquito control programs in those communities are funded irregularly.</span>
+        </li>
+        <li class="opt" data-index="1" role="button" tabindex="0">
+          <span class="key">B</span><span>Their summer temperatures sit near the threshold at which transmission rises steeply.</span>
+        </li>
+        <li class="opt" data-index="2" role="button" tabindex="0">
+          <span class="key">C</span><span>Migrating birds visit those communities only in certain years.</span>
+        </li>
+        <li class="opt" data-index="3" role="button" tabindex="0">
+          <span class="key">D</span><span>Residents there are more likely to travel to inland high-risk areas.</span>
+        </li>
+      </ul>
+      <div class="q-exp"><b>解析：</b>文章先给出「70～73℉ 之间存在陡峭转折」这一机制，随后指出沿海社区的夏季气温恰好 hover 在这条分界线上——只要小幅波动就会跨过阈值，因此年际差异极大。其余选项文中均未提及。</div>
+    </div>
+  </section>
+
+  <p class="attrib">来源：<a href="https://publichealth.berkeley.edu/articles/news/commentary/how-worried-should-you-be-about-west-nile-virus" target="_blank" rel="noopener">UC Berkeley School of Public Health, reproduced with attribution</a></p>
+</article>
+<article class="card" id="a4">
+  <div class="meta">
+    <span>MIT News</span>
+    <span class="tag">technology</span>
+    <span class="tag difficulty-medium">medium</span>
+    <span>242 words</span>
+<span class="lic lic-press-release">press-release</span>  </div>
+
+  <h2><a href="https://news.mit.edu/2026/medical-ai-assistance-benefits-vary-based-on-user-expertise-0804" target="_blank" rel="noopener">The benefits of medical AI assistance vary based on user expertise</a></h2>
+  <p class="title-zh">医疗 AI 的帮助有多大，取决于用的人是谁</p>
+<p class="summary-zh">同一段 AI 解释，帮了医生，却把外行带偏——而且解释越含糊笼统，外行反而越信。</p>
+  <div class="passage">
+    <div class="para">
+      <p class="en">A new study by researchers at MIT and elsewhere found that, while AI assistance generally improved the accuracy of non-experts and clinicians in diagnosing skin diseases, AI explainability methods had different impacts depending on the users&#x27; knowledge level.</p>
+      <p class="zh">麻省理工学院等机构研究人员的一项新研究发现：尽管 AI 辅助总体上提高了外行与临床医生在皮肤病诊断上的准确率，但「可解释性」方法所产生的影响，会因使用者知识水平的不同而截然不同。</p>
+    </div>
+    <div class="para">
+      <p class="en">Explainable AI methods help users know when to trust a model&#x27;s predictions by describing or validating the model&#x27;s decision-making. For instance, a model might use a heat map to highlight image regions that were most important in its diagnosis or a large language model (LLM) to explain the prediction in plain language.</p>
+      <p class="zh">可解释 AI 方法通过描述或验证模型的决策过程，帮助用户判断何时该信任模型的预测。例如，模型可能用热力图标出对诊断最关键的图像区域，或者用大语言模型（LLM）以通俗语言解释这一预测。</p>
+    </div>
+    <div class="para">
+      <p class="en">They found that non-experts&#x27; diagnostic accuracy improved, but it was largely due to <mark class="vocab" data-tip="deference /ˈdefərəns/
+n. 顺从；（不加判断地）听从他人意见
+submission to the judgment of another">deference</mark> to the AI system. Non-experts trusted LLM-based explanations whether they were right or wrong, and found explanations more convincing when they were vague or <mark class="vocab" data-tip="generic /dʒəˈnerɪk/
+adj. 笼统的；泛泛而谈的
+general rather than specific">generic</mark>.</p>
+      <p class="zh">研究者发现，外行的诊断准确率确实提高了，但这在很大程度上源于对 AI 系统的盲从。无论基于大语言模型的解释是对是错，外行都会选择相信；而且解释越是含糊、笼统，他们反而越觉得有说服力。</p>
+    </div>
+    <div class="para">
+      <p class="en">By contrast, clinicians were not tripped up by incorrect AI assistance and performed best when given only a model&#x27;s prediction, with no accompanying explanation.</p>
+      <p class="zh">相比之下，临床医生并未被错误的 AI 建议绊倒；而且当只给出模型的预测结论、不附带任何解释时，他们的表现反而最好。</p>
+    </div>
+    <div class="para">
+      <p class="en">“These findings are important as patients increasingly turn to AI to help with their health care. Our findings show that those with the least medical knowledge are most likely to be <mark class="vocab" data-tip="led astray /led əˈstreɪ/
+phr. 被引入歧途；被带偏
+misled into error">led astray</mark> when explainable AI models give an <mark class="vocab" data-tip="erroneous /ɪˈrəʊniəs/
+adj. 错误的；有谬误的
+incorrect; based on a mistake">erroneous</mark> output,” says Roxana Daneshjou, a co-author and assistant professor of biomedical data science and dermatology at Stanford University.</p>
+      <p class="zh">「随着患者越来越多地借助 AI 处理自己的健康问题，这些发现相当重要。我们的结果表明，当可解释 AI 模型给出错误输出时，医学知识最少的人最容易被带偏。」论文共同作者、斯坦福大学生物医学数据科学与皮肤病学助理教授罗克萨娜·达内什朱如是说。</p>
+    </div>
+    <div class="para">
+      <p class="en">These results <mark class="vocab" data-tip="underscore /ˌʌndəˈskɔː/
+v. 强调；凸显
+to emphasize; to make clear the importance of">underscore</mark> the importance of building AI systems with users in mind and of developing explainability methods that encourage critical thinking rather than <mark class="vocab" data-tip="overreliance /ˌəʊvərɪˈlaɪəns/
+n. 过度依赖
+excessive dependence on something">overreliance</mark> on the model, the researchers say.</p>
+      <p class="zh">研究者表示，这些结果凸显出两点的重要性：一是构建 AI 系统时必须把使用者放在心上，二是开发出的可解释性方法应当促使人批判性思考，而不是让人过度依赖模型。</p>
+    </div>
+  </div>
+
+  <section class="study">
+    <h3>托福核心词</h3>
+    <table class="vocab-table">
+      <tr>
+        <td class="v-word">deference</td>
+        <td class="v-phon">/ˈdefərəns/</td>
+        <td class="v-pos">n.</td>
+        <td>
+          <span class="v-zh">顺从；（不加判断地）听从他人意见</span>
+<div class="v-en">submission to the judgment of another</div>          <div class="v-ctx">They found that non-experts&#39; diagnostic accuracy improved, but it was largely due to deference to the AI system.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">generic</td>
+        <td class="v-phon">/dʒəˈnerɪk/</td>
+        <td class="v-pos">adj.</td>
+        <td>
+          <span class="v-zh">笼统的；泛泛而谈的</span>
+<div class="v-en">general rather than specific</div>          <div class="v-ctx">…and found explanations more convincing when they were vague or generic.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">led astray</td>
+        <td class="v-phon">/led əˈstreɪ/</td>
+        <td class="v-pos">phr.</td>
+        <td>
+          <span class="v-zh">被引入歧途；被带偏</span>
+<div class="v-en">misled into error</div>          <div class="v-ctx">…those with the least medical knowledge are most likely to be led astray when explainable AI models give an erroneous output.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">erroneous</td>
+        <td class="v-phon">/ɪˈrəʊniəs/</td>
+        <td class="v-pos">adj.</td>
+        <td>
+          <span class="v-zh">错误的；有谬误的</span>
+<div class="v-en">incorrect; based on a mistake</div>          <div class="v-ctx">…when explainable AI models give an erroneous output.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">underscore</td>
+        <td class="v-phon">/ˌʌndəˈskɔː/</td>
+        <td class="v-pos">v.</td>
+        <td>
+          <span class="v-zh">强调；凸显</span>
+<div class="v-en">to emphasize; to make clear the importance of</div>          <div class="v-ctx">These results underscore the importance of building AI systems with users in mind.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">overreliance</td>
+        <td class="v-phon">/ˌəʊvərɪˈlaɪəns/</td>
+        <td class="v-pos">n.</td>
+        <td>
+          <span class="v-zh">过度依赖</span>
+<div class="v-en">excessive dependence on something</div>          <div class="v-ctx">…methods that encourage critical thinking rather than overreliance on the model.</div>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="study">
+    <h3>长难句拆解</h3>
+    <div class="sentence">
+      <p class="s-orig">A new study by researchers at MIT and elsewhere found that, while AI assistance generally improved the accuracy of non-experts and clinicians in diagnosing skin diseases, AI explainability methods had different impacts depending on the users&#39; knowledge level.</p>
+      <div class="s-backbone">
+        <span class="label">主干</span>
+        A new study found that AI explainability methods had different impacts.
+<div class="bb-zh">一项新研究发现，可解释性方法的影响并不相同。</div>      </div>
+      <ol class="breakdown">
+        <li>
+          <span class="part">A new study by researchers at MIT and elsewhere</span><span class="role">主语</span>
+<span class="note">中心词是 study，by 短语只是说明出处。</span>        </li>
+        <li>
+          <span class="part">found that</span><span class="role">谓语 + 宾语从句引导词</span>
+<span class="note">关键难点：that 之后并没有立刻接从句主语，而是先插了一整个让步状语从句。</span>        </li>
+        <li>
+          <span class="part">while AI assistance generally improved the accuracy of non-experts and clinicians in diagnosing skin diseases</span><span class="role">让步状语从句</span>
+<span class="note">while 在这里是「虽然」，不是「当……时」。</span>        </li>
+        <li>
+          <span class="part">AI explainability methods had different impacts</span><span class="role">宾语从句主干</span>
+        </li>
+        <li>
+          <span class="part">depending on the users&#39; knowledge level</span><span class="role">分词短语作状语</span>
+<span class="note">说明「不同」的依据是什么。</span>        </li>
+      </ol>
+      <p class="s-trans">麻省理工学院等机构研究人员的一项新研究发现：尽管 AI 辅助总体上提高了外行与临床医生在皮肤病诊断上的准确率，但「可解释性」方法所产生的影响，会因使用者知识水平的不同而截然不同。</p>
+    </div>
+    <div class="sentence">
+      <p class="s-orig">These results underscore the importance of building AI systems with users in mind and of developing explainability methods that encourage critical thinking rather than overreliance on the model, the researchers say.</p>
+      <div class="s-backbone">
+        <span class="label">主干</span>
+        These results underscore the importance of building AI systems and of developing explainability methods.
+<div class="bb-zh">这些结果凸显了「构建系统」与「开发方法」两件事的重要性。</div>      </div>
+      <ol class="breakdown">
+        <li>
+          <span class="part">These results underscore the importance</span><span class="role">主谓宾主干</span>
+        </li>
+        <li>
+          <span class="part">of building AI systems with users in mind</span><span class="role">介词短语（并列第一项）</span>
+        </li>
+        <li>
+          <span class="part">and of developing explainability methods</span><span class="role">介词短语（并列第二项）</span>
+<span class="note">重复出现的 of 是判断并列关系的关键信号——两个 of 都挂在 importance 上。</span>        </li>
+        <li>
+          <span class="part">that encourage critical thinking rather than overreliance on the model</span><span class="role">定语从句</span>
+<span class="note">只修饰 methods，不修饰整个 importance。</span>        </li>
+        <li>
+          <span class="part">the researchers say</span><span class="role">后置引述</span>
+<span class="note">英文新闻常把「某某说」放到句末，翻译时通常要提前。</span>        </li>
+      </ol>
+      <p class="s-trans">研究者表示，这些结果凸显出两点的重要性：一是构建 AI 系统时必须把使用者放在心上，二是开发出的可解释性方法应当促使人批判性思考，而不是让人过度依赖模型。</p>
+    </div>
+  </section>
+
+  <section class="study quiz">
+    <h3>阅读理解</h3>
+    <div class="q" data-answer="2">
+      <div class="q-head">
+        <span class="q-type">factual</span>
+        <span class="q-stem">1. According to the passage, under which condition did clinicians perform best?</span>
+      </div>
+      <ul class="opts">
+        <li class="opt" data-index="0" role="button" tabindex="0">
+          <span class="key">A</span><span>When they received a heat map highlighting important image regions.</span>
+        </li>
+        <li class="opt" data-index="1" role="button" tabindex="0">
+          <span class="key">B</span><span>When they received an LLM explanation written in plain language.</span>
+        </li>
+        <li class="opt" data-index="2" role="button" tabindex="0">
+          <span class="key">C</span><span>When they received the model&#39;s prediction with no explanation attached.</span>
+        </li>
+        <li class="opt" data-index="3" role="button" tabindex="0">
+          <span class="key">D</span><span>When they worked without any AI assistance at all.</span>
+        </li>
+      </ul>
+      <div class="q-exp"><b>解析：</b>第四段：clinicians…performed best when given only a model&#39;s prediction, with no accompanying explanation。注意 D 项的陷阱——「不要解释」不等于「不要 AI」，文章说 AI 辅助总体上是提高了准确率的。</div>
+    </div>
+    <div class="q" data-answer="1">
+      <div class="q-head">
+        <span class="q-type">inference</span>
+        <span class="q-stem">2. The finding that non-experts found explanations more convincing when they were vague or generic is surprising because</span>
+      </div>
+      <ul class="opts">
+        <li class="opt" data-index="0" role="button" tabindex="0">
+          <span class="key">A</span><span>vague explanations are usually shorter and therefore easier to ignore</span>
+        </li>
+        <li class="opt" data-index="1" role="button" tabindex="0">
+          <span class="key">B</span><span>one would expect a more specific explanation to inspire more confidence</span>
+        </li>
+        <li class="opt" data-index="2" role="button" tabindex="0">
+          <span class="key">C</span><span>non-experts were not asked to evaluate the explanations at all</span>
+        </li>
+        <li class="opt" data-index="3" role="button" tabindex="0">
+          <span class="key">D</span><span>clinicians reported exactly the same preference</span>
+        </li>
+      </ul>
+      <div class="q-exp"><b>解析：</b>直觉上，越具体、越有细节的解释越该让人信服；但研究发现外行恰恰相反——含糊笼统时反而更买账。这说明他们信的并非解释的内容质量，而是「有解释」这个动作本身，与前一句的 deference（盲从）互为印证。</div>
+    </div>
+    <div class="q" data-answer="2">
+      <div class="q-head">
+        <span class="q-type">purpose</span>
+        <span class="q-stem">3. Why does the author quote Roxana Daneshjou in the passage?</span>
+      </div>
+      <ul class="opts">
+        <li class="opt" data-index="0" role="button" tabindex="0">
+          <span class="key">A</span><span>To question whether the study&#39;s methods were sound.</span>
+        </li>
+        <li class="opt" data-index="1" role="button" tabindex="0">
+          <span class="key">B</span><span>To describe how the heat map technique was developed.</span>
+        </li>
+        <li class="opt" data-index="2" role="button" tabindex="0">
+          <span class="key">C</span><span>To point out the practical stakes for ordinary patients using AI.</span>
+        </li>
+        <li class="opt" data-index="3" role="button" tabindex="0">
+          <span class="key">D</span><span>To argue that explainable AI should no longer be used in medicine.</span>
+        </li>
+      </ul>
+      <div class="q-exp"><b>解析：</b>这段引语把实验结论落到现实：随着患者自己越来越多地用 AI 看病，「医学知识最少的人最容易被带偏」。它是在说明危害对象与现实意义，而不是质疑方法（A）或全盘否定可解释 AI（D）。</div>
+    </div>
+  </section>
+
+  <p class="attrib">来源：<a href="https://news.mit.edu/2026/medical-ai-assistance-benefits-vary-based-on-user-expertise-0804" target="_blank" rel="noopener">MIT News, reproduced with attribution</a></p>
+</article>
+<article class="card" id="a5">
+  <div class="meta">
+    <span>University of Cambridge</span>
+    <span class="tag">biology</span>
+    <span class="tag difficulty-hard">hard</span>
+    <span>226 words</span>
+<span class="lic lic-cc-by">cc-by</span>  </div>
+
+  <h2><a href="https://www.cam.ac.uk/research/news/cambridge-to-lead-new-ps50-million-centre-to-study-mitochondrial-dna-diseases" target="_blank" rel="noopener">Cambridge to lead new £50 million centre to study mitochondrial DNA diseases</a></h2>
+  <p class="title-zh">剑桥将牵头 5000 万英镑新中心，攻关线粒体 DNA 疾病</p>
+<p class="summary-zh">线粒体自带一套独立于细胞核的 DNA。它一旦出错，目前无药可医——每 5000 人中约有 1 人受累。</p>
+  <div class="passage">
+    <div class="para">
+      <p class="en">The Medical Research Council (MRC) has announced a £50 million investment in the new MRC Centre of Research Excellence in Mitochondrial Genome Therapeutics, which aims to enable new treatments into potentially fatal mitochondrial DNA diseases.</p>
+      <p class="zh">英国医学研究理事会（MRC）宣布向新设立的「MRC 线粒体基因组疗法卓越研究中心」投入 5000 万英镑，目标是为可能致命的线粒体 DNA 疾病开辟新的治疗途径。</p>
+    </div>
+    <div class="para">
+      <p class="en">The MRC Centre of Research Excellence (MRC CoRE) will be led by Professor Michal Minczuk of the University of Cambridge. It brings together leading experts from across disciplines to define how <mark class="vocab" data-tip="mutations /mjuːˈteɪʃnz/
+n. （基因）突变
+permanent changes in a DNA sequence">mutations</mark> in mitochondrial DNA (mtDNA) cause disease and translate that knowledge into therapies.</p>
+      <p class="zh">该卓越研究中心将由剑桥大学的米哈尔·明丘克教授领衔，汇聚多个学科的顶尖专家，一方面厘清线粒体 DNA（mtDNA）突变如何致病，另一方面把这些认识转化为治疗手段。</p>
+    </div>
+    <div class="para">
+      <p class="en">No cure currently exists for mitochondrial diseases, a group of genetic disorders that affect around 1 in 5000 people, leaving patients and their families facing significant <mark class="vocab" data-tip="unmet /ˌʌnˈmet/
+adj. 未被满足的
+not yet satisfied or fulfilled">unmet</mark> medical needs.</p>
+      <p class="zh">线粒体疾病目前尚无治愈手段。这是一组遗传性疾病，约每 5000 人中就有 1 人受累，患者及其家庭面临着大量未被满足的医疗需求。</p>
+    </div>
+    <div class="para">
+      <p class="en">Mitochondria are tiny ‘organelles’ that sit within our cells, where they act like batteries, providing energy in the form of the molecule ATP to power the cells. Each mitochondrion has its own DNA, <mark class="vocab" data-tip="distinct /dɪˈstɪŋkt/
+adj. 截然不同的；独立分开的
+clearly different or separate">distinct</mark> from the rest of the human genome, which is comprised of nuclear DNA.</p>
+      <p class="zh">线粒体是位于细胞内部的微小「细胞器」，在细胞中扮演电池的角色，以 ATP 分子的形式提供能量、驱动细胞运转。每个线粒体都拥有自己的一套 DNA，与人类基因组的其余部分（即细胞核 DNA）截然不同。</p>
+    </div>
+    <div class="para">
+      <p class="en">Beyond inherited conditions, mtDNA <mark class="vocab" data-tip="mutations /mjuːˈteɪʃnz/
+n. （基因）突变
+permanent changes in a DNA sequence">mutations</mark> are increasingly linked to neurodegeneration, metabolic disease, cardiovascular failure and age-related <mark class="vocab" data-tip="deterioration /dɪˌtɪəriəˈreɪʃn/
+n. 退化；恶化
+the process of becoming progressively worse">deterioration</mark>. In affected individuals, mitochondrial dysfunction can contribute to severe disability, progressive decline and <mark class="vocab" data-tip="premature /ˈpremətʃə/
+adj. 过早的；提前发生的
+happening earlier than the normal or expected time">premature</mark> death.</p>
+      <p class="zh">除遗传性疾病之外，线粒体 DNA 突变还越来越多地被关联到神经退行性病变、代谢性疾病、心血管功能衰竭以及与年龄相关的机能退化。在受累个体身上，线粒体功能障碍可能导致严重残疾、病情持续恶化乃至过早死亡。</p>
+    </div>
+    <div class="para">
+      <p class="en">“Mitochondrial DNA diseases are <mark class="vocab" data-tip="devastating /ˈdevəsteɪtɪŋ/
+adj. 毁灭性的；破坏力极大的
+causing severe damage or distress">devastating</mark> conditions that can have a huge impact on an individual&#x27;s life and on their families, and in many cases prove fatal. Our new Centre will provide pioneering approaches to understanding and treating these diseases.”</p>
+      <p class="zh">「线粒体 DNA 疾病是毁灭性的病症，会对个人及其家庭造成巨大冲击，很多情况下更是致命的。我们的新中心将为理解和治疗这些疾病提供开创性的路径。」</p>
+    </div>
+  </div>
+
+  <section class="study">
+    <h3>托福核心词</h3>
+    <table class="vocab-table">
+      <tr>
+        <td class="v-word">mutations</td>
+        <td class="v-phon">/mjuːˈteɪʃnz/</td>
+        <td class="v-pos">n.</td>
+        <td>
+          <span class="v-zh">（基因）突变</span>
+<div class="v-en">permanent changes in a DNA sequence</div>          <div class="v-ctx">…to define how mutations in mitochondrial DNA (mtDNA) cause disease and translate that knowledge into therapies.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">unmet</td>
+        <td class="v-phon">/ˌʌnˈmet/</td>
+        <td class="v-pos">adj.</td>
+        <td>
+          <span class="v-zh">未被满足的</span>
+<div class="v-en">not yet satisfied or fulfilled</div>          <div class="v-ctx">…leaving patients and their families facing significant unmet medical needs.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">distinct</td>
+        <td class="v-phon">/dɪˈstɪŋkt/</td>
+        <td class="v-pos">adj.</td>
+        <td>
+          <span class="v-zh">截然不同的；独立分开的</span>
+<div class="v-en">clearly different or separate</div>          <div class="v-ctx">Each mitochondrion has its own DNA, distinct from the rest of the human genome.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">deterioration</td>
+        <td class="v-phon">/dɪˌtɪəriəˈreɪʃn/</td>
+        <td class="v-pos">n.</td>
+        <td>
+          <span class="v-zh">退化；恶化</span>
+<div class="v-en">the process of becoming progressively worse</div>          <div class="v-ctx">…mtDNA mutations are increasingly linked to neurodegeneration, metabolic disease, cardiovascular failure and age-related deterioration.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">premature</td>
+        <td class="v-phon">/ˈpremətʃə/</td>
+        <td class="v-pos">adj.</td>
+        <td>
+          <span class="v-zh">过早的；提前发生的</span>
+<div class="v-en">happening earlier than the normal or expected time</div>          <div class="v-ctx">…mitochondrial dysfunction can contribute to severe disability, progressive decline and premature death.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="v-word">devastating</td>
+        <td class="v-phon">/ˈdevəsteɪtɪŋ/</td>
+        <td class="v-pos">adj.</td>
+        <td>
+          <span class="v-zh">毁灭性的；破坏力极大的</span>
+<div class="v-en">causing severe damage or distress</div>          <div class="v-ctx">Mitochondrial DNA diseases are devastating conditions that can have a huge impact on an individual&#39;s life and on their families.</div>
+        </td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="study">
+    <h3>长难句拆解</h3>
+    <div class="sentence">
+      <p class="s-orig">No cure currently exists for mitochondrial diseases, a group of genetic disorders that affect around 1 in 5000 people, leaving patients and their families facing significant unmet medical needs.</p>
+      <div class="s-backbone">
+        <span class="label">主干</span>
+        No cure exists for mitochondrial diseases.
+<div class="bb-zh">线粒体疾病目前无药可治。</div>      </div>
+      <ol class="breakdown">
+        <li>
+          <span class="part">No cure currently exists for mitochondrial diseases</span><span class="role">主干（否定主语）</span>
+<span class="note">英文习惯把否定放在主语上（No cure exists），中文要转成「没有／尚无」来译。</span>        </li>
+        <li>
+          <span class="part">a group of genetic disorders</span><span class="role">同位语</span>
+<span class="note">解释 mitochondrial diseases 是什么。</span>        </li>
+        <li>
+          <span class="part">that affect around 1 in 5000 people</span><span class="role">定语从句</span>
+<span class="note">修饰 disorders，不是修饰 cure。</span>        </li>
+        <li>
+          <span class="part">leaving patients and their families facing significant unmet medical needs</span><span class="role">现在分词作结果状语</span>
+<span class="note">leave sb. doing 结构：使某人处于某种持续状态。</span>        </li>
+      </ol>
+      <p class="s-trans">线粒体疾病目前尚无治愈手段。这是一组遗传性疾病，约每 5000 人中就有 1 人受累，患者及其家庭面临着大量未被满足的医疗需求。</p>
+    </div>
+    <div class="sentence">
+      <p class="s-orig">Each mitochondrion has its own DNA, distinct from the rest of the human genome, which is comprised of nuclear DNA.</p>
+      <div class="s-backbone">
+        <span class="label">主干</span>
+        Each mitochondrion has its own DNA.
+<div class="bb-zh">每个线粒体都有自己的 DNA。</div>      </div>
+      <ol class="breakdown">
+        <li>
+          <span class="part">Each mitochondrion has its own DNA</span><span class="role">主干</span>
+        </li>
+        <li>
+          <span class="part">distinct from the rest of the human genome</span><span class="role">形容词短语作后置定语</span>
+<span class="note">修饰 DNA，相当于 which is distinct from…。</span>        </li>
+        <li>
+          <span class="part">which is comprised of nuclear DNA</span><span class="role">非限定性定语从句</span>
+<span class="note">先行词是 the rest of the human genome——判错先行词会把整句意思读反。</span>        </li>
+      </ol>
+      <p class="s-trans">每个线粒体都拥有自己的一套 DNA，与人类基因组的其余部分（即细胞核 DNA）截然不同。</p>
+    </div>
+  </section>
+
+  <section class="study quiz">
+    <h3>阅读理解</h3>
+    <div class="q" data-answer="1">
+      <div class="q-head">
+        <span class="q-type">factual</span>
+        <span class="q-stem">1. According to the passage, what role do mitochondria play inside cells?</span>
+      </div>
+      <ul class="opts">
+        <li class="opt" data-index="0" role="button" tabindex="0">
+          <span class="key">A</span><span>They store the cell&#39;s genetic instructions for reproduction.</span>
+        </li>
+        <li class="opt" data-index="1" role="button" tabindex="0">
+          <span class="key">B</span><span>They supply energy in the form of ATP, acting like batteries.</span>
+        </li>
+        <li class="opt" data-index="2" role="button" tabindex="0">
+          <span class="key">C</span><span>They repair damaged sections of nuclear DNA.</span>
+        </li>
+        <li class="opt" data-index="3" role="button" tabindex="0">
+          <span class="key">D</span><span>They regulate the rate at which cells divide.</span>
+        </li>
+      </ul>
+      <div class="q-exp"><b>解析：</b>第四段：they act like batteries, providing energy in the form of the molecule ATP to power the cells。A 项虽然文中提到线粒体有自己的 DNA，但那不是「储存细胞的遗传指令」这一功能定位；C、D 项文中无据。</div>
+    </div>
+    <div class="q" data-answer="1">
+      <div class="q-head">
+        <span class="q-type">vocabulary</span>
+        <span class="q-stem">2. The word “unmet” in the passage is closest in meaning to</span>
+      </div>
+      <ul class="opts">
+        <li class="opt" data-index="0" role="button" tabindex="0">
+          <span class="key">A</span><span>unexpected</span>
+        </li>
+        <li class="opt" data-index="1" role="button" tabindex="0">
+          <span class="key">B</span><span>unsatisfied</span>
+        </li>
+        <li class="opt" data-index="2" role="button" tabindex="0">
+          <span class="key">C</span><span>unavoidable</span>
+        </li>
+        <li class="opt" data-index="3" role="button" tabindex="0">
+          <span class="key">D</span><span>unreported</span>
+        </li>
+      </ul>
+      <div class="q-exp"><b>解析：</b>unmet = un- + met（meet a need「满足需求」的过去分词），指需求尚未被满足。此处呼应上文「目前尚无治愈手段」——正因为无药可医，需求才始终悬着。</div>
+    </div>
+    <div class="q" data-answer="1">
+      <div class="q-head">
+        <span class="q-type">reference</span>
+        <span class="q-stem">3. In the sentence about each mitochondrion having its own DNA, the word “which” refers to</span>
+      </div>
+      <ul class="opts">
+        <li class="opt" data-index="0" role="button" tabindex="0">
+          <span class="key">A</span><span>the mitochondrion&#39;s own DNA</span>
+        </li>
+        <li class="opt" data-index="1" role="button" tabindex="0">
+          <span class="key">B</span><span>the rest of the human genome</span>
+        </li>
+        <li class="opt" data-index="2" role="button" tabindex="0">
+          <span class="key">C</span><span>each mitochondrion</span>
+        </li>
+        <li class="opt" data-index="3" role="button" tabindex="0">
+          <span class="key">D</span><span>the cell containing the mitochondrion</span>
+        </li>
+      </ul>
+      <div class="q-exp"><b>解析：</b>which 引导的非限定性定语从句说明「由细胞核 DNA 构成」，能与之匹配的只能是 the rest of the human genome（基因组的其余部分）。若误判为 A，就会得出「线粒体 DNA 由核 DNA 构成」的结论，恰恰与全句强调的「两者截然不同」相反。</div>
+    </div>
+  </section>
+
+  <p class="attrib">来源：<a href="https://www.cam.ac.uk/research/news/cambridge-to-lead-new-ps50-million-centre-to-study-mitochondrial-dna-diseases" target="_blank" rel="noopener">University of Cambridge, CC BY 4.0</a></p>
+</article>
+
+<section class="card glossary" id="glossary">
+  <h2>今日词汇总表</h2>
+  <p class="title-zh">30 个词，按字母排序，可直接抄进 Anki。</p>
+  <table>
+    <thead>
+      <tr><th>单词</th><th>音标</th><th>词性</th><th>释义</th><th>出处</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="w">aptly</td>
+        <td class="ph">/ˈæptli/</td>
+        <td class="ph">adv.</td>
+        <td>贴切地；恰如其分地</td>
+        <td class="ref"><a href="#a2">#2</a></td>
+      </tr>
+      <tr>
+        <td class="w">array</td>
+        <td class="ph">/əˈreɪ/</td>
+        <td class="ph">n.</td>
+        <td>一系列；大量各式各样的</td>
+        <td class="ref"><a href="#a1">#1</a></td>
+      </tr>
+      <tr>
+        <td class="w">compact</td>
+        <td class="ph">/kəmˈpækt/</td>
+        <td class="ph">adj.</td>
+        <td>紧凑的；致密的</td>
+        <td class="ref"><a href="#a2">#2</a></td>
+      </tr>
+      <tr>
+        <td class="w">contiguous</td>
+        <td class="ph">/kənˈtɪɡjuəs/</td>
+        <td class="ph">adj.</td>
+        <td>接壤的；毗连的（美国语境中常指「本土 48 州」）</td>
+        <td class="ref"><a href="#a3">#3</a></td>
+      </tr>
+      <tr>
+        <td class="w">convergence</td>
+        <td class="ph">/kənˈvɜːdʒəns/</td>
+        <td class="ph">n.</td>
+        <td>汇合；聚集于一处</td>
+        <td class="ref"><a href="#a1">#1</a></td>
+      </tr>
+      <tr>
+        <td class="w">deference</td>
+        <td class="ph">/ˈdefərəns/</td>
+        <td class="ph">n.</td>
+        <td>顺从；（不加判断地）听从他人意见</td>
+        <td class="ref"><a href="#a4">#4</a></td>
+      </tr>
+      <tr>
+        <td class="w">deterioration</td>
+        <td class="ph">/dɪˌtɪəriəˈreɪʃn/</td>
+        <td class="ph">n.</td>
+        <td>退化；恶化</td>
+        <td class="ref"><a href="#a5">#5</a></td>
+      </tr>
+      <tr>
+        <td class="w">devastating</td>
+        <td class="ph">/ˈdevəsteɪtɪŋ/</td>
+        <td class="ph">adj.</td>
+        <td>毁灭性的；破坏力极大的</td>
+        <td class="ref"><a href="#a5">#5</a></td>
+      </tr>
+      <tr>
+        <td class="w">dissipate</td>
+        <td class="ph">/ˈdɪsɪpeɪt/</td>
+        <td class="ph">v.</td>
+        <td>驱散；使逐渐消散</td>
+        <td class="ref"><a href="#a2">#2</a></td>
+      </tr>
+      <tr>
+        <td class="w">distinct</td>
+        <td class="ph">/dɪˈstɪŋkt/</td>
+        <td class="ph">adj.</td>
+        <td>截然不同的；独立分开的</td>
+        <td class="ref"><a href="#a5">#5</a></td>
+      </tr>
+      <tr>
+        <td class="w">dormant</td>
+        <td class="ph">/ˈdɔːmənt/</td>
+        <td class="ph">adj.</td>
+        <td>休眠的；蛰伏的</td>
+        <td class="ref"><a href="#a1">#1</a></td>
+      </tr>
+      <tr>
+        <td class="w">embedded</td>
+        <td class="ph">/ɪmˈbedɪd/</td>
+        <td class="ph">adj.</td>
+        <td>深嵌其中的；埋在……里面的</td>
+        <td class="ref"><a href="#a2">#2</a></td>
+      </tr>
+      <tr>
+        <td class="w">erroneous</td>
+        <td class="ph">/ɪˈrəʊniəs/</td>
+        <td class="ph">adj.</td>
+        <td>错误的；有谬误的</td>
+        <td class="ref"><a href="#a4">#4</a></td>
+      </tr>
+      <tr>
+        <td class="w">fatal</td>
+        <td class="ph">/ˈfeɪtl/</td>
+        <td class="ph">adj.</td>
+        <td>致命的；导致死亡的</td>
+        <td class="ref"><a href="#a3">#3</a></td>
+      </tr>
+      <tr>
+        <td class="w">generic</td>
+        <td class="ph">/dʒəˈnerɪk/</td>
+        <td class="ph">adj.</td>
+        <td>笼统的；泛泛而谈的</td>
+        <td class="ref"><a href="#a4">#4</a></td>
+      </tr>
+      <tr>
+        <td class="w">hover</td>
+        <td class="ph">/ˈhɒvə/</td>
+        <td class="ph">v.</td>
+        <td>（在某数值附近）徘徊、逗留</td>
+        <td class="ref"><a href="#a3">#3</a></td>
+      </tr>
+      <tr>
+        <td class="w">impermeable</td>
+        <td class="ph">/ɪmˈpɜːmiəbl/</td>
+        <td class="ph">adj.</td>
+        <td>不透水的；不渗透的</td>
+        <td class="ref"><a href="#a1">#1</a></td>
+      </tr>
+      <tr>
+        <td class="w">incidence</td>
+        <td class="ph">/ˈɪnsɪdəns/</td>
+        <td class="ph">n.</td>
+        <td>发生率；发病率</td>
+        <td class="ref"><a href="#a3">#3</a></td>
+      </tr>
+      <tr>
+        <td class="w">led astray</td>
+        <td class="ph">/led əˈstreɪ/</td>
+        <td class="ph">phr.</td>
+        <td>被引入歧途；被带偏</td>
+        <td class="ref"><a href="#a4">#4</a></td>
+      </tr>
+      <tr>
+        <td class="w">luminous</td>
+        <td class="ph">/ˈluːmɪnəs/</td>
+        <td class="ph">adj.</td>
+        <td>发光的；明亮的（天文中指「光度大的」）</td>
+        <td class="ref"><a href="#a2">#2</a></td>
+      </tr>
+      <tr>
+        <td class="w">mutations</td>
+        <td class="ph">/mjuːˈteɪʃnz/</td>
+        <td class="ph">n.</td>
+        <td>（基因）突变</td>
+        <td class="ref"><a href="#a5">#5</a></td>
+      </tr>
+      <tr>
+        <td class="w">overreliance</td>
+        <td class="ph">/ˌəʊvərɪˈlaɪəns/</td>
+        <td class="ph">n.</td>
+        <td>过度依赖</td>
+        <td class="ref"><a href="#a4">#4</a></td>
+      </tr>
+      <tr>
+        <td class="w">predominantly</td>
+        <td class="ph">/prɪˈdɒmɪnəntli/</td>
+        <td class="ph">adv.</td>
+        <td>主要地；在很大程度上</td>
+        <td class="ref"><a href="#a3">#3</a></td>
+      </tr>
+      <tr>
+        <td class="w">premature</td>
+        <td class="ph">/ˈpremətʃə/</td>
+        <td class="ph">adj.</td>
+        <td>过早的；提前发生的</td>
+        <td class="ref"><a href="#a5">#5</a></td>
+      </tr>
+      <tr>
+        <td class="w">profoundly</td>
+        <td class="ph">/prəˈfaʊndli/</td>
+        <td class="ph">adv.</td>
+        <td>深刻地；极大程度地</td>
+        <td class="ref"><a href="#a3">#3</a></td>
+      </tr>
+      <tr>
+        <td class="w">sculpt</td>
+        <td class="ph">/skʌlpt/</td>
+        <td class="ph">v.</td>
+        <td>雕琢；塑造出……的形状</td>
+        <td class="ref"><a href="#a2">#2</a></td>
+      </tr>
+      <tr>
+        <td class="w">subside</td>
+        <td class="ph">/səbˈsaɪd/</td>
+        <td class="ph">v.</td>
+        <td>（雨、风、情绪等）减弱、平息</td>
+        <td class="ref"><a href="#a1">#1</a></td>
+      </tr>
+      <tr>
+        <td class="w">surreal</td>
+        <td class="ph">/səˈriːəl/</td>
+        <td class="ph">adj.</td>
+        <td>超现实的；离奇得不像真的</td>
+        <td class="ref"><a href="#a1">#1</a></td>
+      </tr>
+      <tr>
+        <td class="w">underscore</td>
+        <td class="ph">/ˌʌndəˈskɔː/</td>
+        <td class="ph">v.</td>
+        <td>强调；凸显</td>
+        <td class="ref"><a href="#a4">#4</a></td>
+      </tr>
+      <tr>
+        <td class="w">unmet</td>
+        <td class="ph">/ˌʌnˈmet/</td>
+        <td class="ph">adj.</td>
+        <td>未被满足的</td>
+        <td class="ref"><a href="#a5">#5</a></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<footer class="page">
+  <p>由 <a href="https://github.com/szylover/toefl-daily-news">toefl-daily-news</a> 生成于 2026-08-06 17:04。</p>
+  <p>本页所有文章均取自公有领域（NASA / NSF）、CC BY 授权（PLOS、eLife、剑桥大学等）或机构新闻稿，
+     已按各自许可注明出处并链接原文；中文翻译与注释为本项目原创。</p>
+</footer>
+
+</div>
+
+<script>
+  (function () {
+    const body = document.body;
+    const zhBtn = document.getElementById('toggle-zh');
+    const hlBtn = document.getElementById('toggle-hl');
+
+    function apply(key, cls, btn, onLabel, offLabel) {
+      const on = localStorage.getItem(key) === '1';
+      body.classList.toggle(cls, on);
+      btn.textContent = on ? onLabel : offLabel;
+      btn.setAttribute('aria-pressed', String(cls === 'no-highlight' ? !on : on));
+    }
+
+    function bind(key, cls, btn, onLabel, offLabel) {
+      apply(key, cls, btn, onLabel, offLabel);
+      btn.addEventListener('click', function () {
+        localStorage.setItem(key, localStorage.getItem(key) === '1' ? '0' : '1');
+        apply(key, cls, btn, onLabel, offLabel);
+      });
+    }
+
+    bind('tdn.hideZh', 'hide-zh', zhBtn, '显示中文', '隐藏中文');
+    bind('tdn.noHighlight', 'no-highlight', hlBtn, '词汇高亮已关', '词汇高亮');
+
+    // Reading progress.
+    const bar = document.getElementById('progress');
+    function progress() {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+    }
+    window.addEventListener('scroll', progress, { passive: true });
+    window.addEventListener('resize', progress);
+    progress();
+
+    // Quiz. First click locks the question and reveals the explanation, so a
+    // second guess cannot quietly turn a wrong answer into a right one.
+    document.querySelectorAll('.q').forEach(function (q) {
+      const key = parseInt(q.dataset.answer, 10);
+      const opts = q.querySelectorAll('.opt');
+      function choose(opt) {
+        if (q.classList.contains('answered')) return;
+        q.classList.add('answered');
+        const picked = parseInt(opt.dataset.index, 10);
+        opts.forEach(function (o) {
+          o.classList.add('locked');
+          const i = parseInt(o.dataset.index, 10);
+          if (i === key) o.classList.add('correct');
+          else if (i === picked) o.classList.add('wrong');
+        });
+      }
+      opts.forEach(function (opt) {
+        opt.addEventListener('click', function () { choose(opt); });
+        opt.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); choose(opt); }
+        });
+      });
+    });
+  })();
+</script>
+</body>
+</html>
