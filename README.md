@@ -88,6 +88,7 @@
 - WP-03.1 [技术面试英语：高频句型与表达](english/01-technical-interview-english.md)
 - WP-03.2 [英语口语流利度提升系统（工程师版）](english/02-english-speaking-fluency.md)
 - WP-03.3 [工程师的英文技术写作与异步沟通](english/03-technical-writing-english.md)
+- 📰 附录 · [每日托福精读](english/daily/README.md)（每天一页，在线阅读）
 
 ### WP-04 · 个人投资白皮书（资本杠杆）
 

@@ -30,6 +30,10 @@
 2. [英语口语流利度提升系统（工程师版）](02-english-speaking-fluency.md)
 3. [工程师的英文技术写作与异步沟通](03-technical-writing-english.md)
 
+## 附录
+
+- 📰 [每日托福精读（每天一页，在线阅读）](daily/README.md) —— 英中对照原文 · 托福核心词 · 长难句拆解 · 阅读理解自测
+
 ## 参考文献
 
 1. [MDN Web Docs（地道技术英文语料）](https://developer.mozilla.org)
