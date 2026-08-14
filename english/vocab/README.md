@@ -2,9 +2,7 @@
 
 > 把间隔重复里的词表重组成连贯文章：一个词只高亮一次，点开即查英英释义与发音。
 
-📖 **在线阅读：<https://szylover.github.io/ai-lifeos-handbook/vocab/momo.html>**
-
-📕 **电子书：[`momo-reading.epub`](momo-reading.epub)**（241 KB，EPUB 3，epubcheck 零错误零警告）
+📕 **电子书：[`momo-reading.epub`](momo-reading.epub)**（241 KB，EPUB 3，epubcheck 零错误零警告）——这是唯一的发布物。
 
 ## 这是什么
 
@@ -17,8 +15,10 @@
 也必须在同一篇里再出现一次，但不重复讲解，只以虚线复现的形式出现。
 判为「认识」的词不收：既然已经答对了，再花句子写它，挤掉的是真正需要再见一面的词。
 
-正文是 HTML（需要点词查释义、语音朗读、高亮开关等交互，Markdown 表达不了），
-因此页面放在 `gh-pages` 分支由 GitHub Pages 提供，本分支保持纯 Markdown。
+这本书**只以 EPUB 发布**，读它的地方是文石 Boox 的 NeoReader。
+早期同时出过一个网页版（`gh-pages` 上的 `vocab/momo.html`），已经不再更新——
+实际的阅读全部发生在电纸书上，维护两套输出只是让它们悄悄不一致。
+旧链接保留不删，以免外部引用 404，但内容停在最后一次网页构建。
 
 ## 当期版本
 
@@ -28,7 +28,7 @@
 | 覆盖词数 | 1200 / 1200（学习计划内全量） |
 | 章节数 | 14（主题精读 13 + 每日精读 1） |
 | 正文词数 | 约 18,700 |
-| 顽固词（STICKING） | 77，页面内标为橙色 |
+| 顽固词（STICKING） | 77 |
 | 最新一篇 | 2026-08-14 · 争论终结的两种方式 |
 
 ## 章节
@@ -70,18 +70,9 @@
 
 ## 怎么用
 
-### 网页版
-
-- **点任意高亮词**：底部弹出英英释义，同时朗读，可切慢速
-- **「下一个」**：顺着高亮词跳读，适合快速过一遍生词
-- **「高亮」开关**：关掉底色变成纯净排版，用来自测还认不认得
-- **「朗读全章」**：泛听，或跟读练语音
-- 橙色词是软件判定的顽固词，优先看
-
-### EPUB 版（电纸书）
-
 `momo-reading.epub` 是给电纸书用的，主要在文石 Boox 的 NeoReader 上读。
-NeoReader 对 JavaScript 支持极弱，网页那套交互一律用不了，所以 EPUB 走的是另一套。
+NeoReader 对 JavaScript 支持极弱，所以正文是纯 HTML + CSS，没有任何交互。
+Boox 是灰度屏，含义一律用字重和下划线表达，不用颜色。
 
 正文里有两种标记：
 
@@ -122,8 +113,9 @@ node today.mjs       只读缓存，看看今天要写哪些词
    ↓
 写当天一篇 → node verify.mjs daily-YYYY-MM-DD    必须 PASS，不过就重写
    ↓
-node build.mjs       重编网页版
-node build-epub.mjs  重编 EPUB
+node build-epub.mjs  重编 EPUB（唯一发布物）
+   ↓
+epubcheck 零错误 → py lib\deploy_boox.py 传到设备
 ```
 
 以前要攒够约 80 词才开一章，结果是**最近背的词最晚进书**——恰恰是最该复习的那批
