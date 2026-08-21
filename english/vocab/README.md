@@ -2,7 +2,7 @@
 
 > 把间隔重复里的词表重组成连贯文章：一个词只讲解一次，脚注给出贴合此处的英英释义。
 
-📕 **电子书：[`momo-reading.epub`](momo-reading.epub)**（259 KB，EPUB 3，epubcheck 零错误零警告）——这是唯一的发布物。
+📕 **电子书：[`momo-reading.epub`](momo-reading.epub)**（278 KB，EPUB 3，epubcheck 零错误零警告）——这是唯一的发布物。
 
 ## 这是什么
 
